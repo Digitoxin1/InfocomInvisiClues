@@ -6,76 +6,70 @@
 <title>Hollywood Hijinx InvisiClues</title>
 
 <style type="text/css">
-/*InvisiClues.css v2.1*/
+/*InvisiClues.css v2.2*/
 :root {
+	/* Layout */
 	--width: 40rem;
+	--label-width: 2.48rem;
+	--cell-border: 1px;
+	--row-gap: 0.45rem;
+	
+	/* Typography */
 	--mono: "Source Code Pro", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Fira Mono", "Droid Sans Mono", "Liberation Mono", monospace;
 	--sans: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Oxygen, Cantarell, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--normal-weight: 400;
+	--bold-weight: 600;
+	
+	/* Colors */
+	--bg-color: #FAFAEF;
+	--fg-color: #000;
+	--link-color: #000;
+	--visited-link-color: #000;
+	
+	/* UI metrics */
+	--link-underline-height: 0.14rem;
+	--line-outline-width: 0.1rem;
+	
+	/* Global behaviors */	
 	cursor: default;
 	overflow-wrap: break-word;
-	-moz-tab-size: 4;
 	tab-size: 4;
+	-moz-tab-size: 4;	
 	-webkit-tap-highlight-color: transparent;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 }
-@media not (prefers-color-scheme: dark) {
-	:root {
-		--normal-weight: 400;
-		--bold-weight: 600;
-		--bg-color: #FAFAEF;
-		--link-color: #00e;
-		--visited-link-color: #551a8b;
-		--fg-color: black;
-		--link-underline-height: .14rem;
-		--line-outline-width: .1rem;
-		--summary-outline-width: .05rem;
-	}
-}
-@supports (color-scheme: dark light) {
-	@media screen and (prefers-color-scheme: dark) {
-		:root {
-			--normal-weight: 350;
-			--bold-weight: 550;
-			--bg-color: #131415;
-			--link-color: #6085ea;
-			--visited-link-color: #c999d9;
-			--fg-color: #d8d8d8;
-			--link-underline-height: .1em;
-			--line-outline-width: .07rem;
-			--summary-outline-width: .08rem;
-		}
-	}
-}
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio, pre):not(svg *, symbol *)) {
 	all: unset;
 	display: revert;
 }
-body,
-html {
-	width: 100%;
-	height: 100%;
-}
+
 html {
 	box-sizing: border-box;
 	background-repeat: no-repeat;
-	font-size: 100%;
-	vertical-align: baseline;
-	font-weight: var(--normal-weight);
-	font-family: var(--sans);
-	font-size: 17px;
 	scroll-behavior: smooth;
+		
+	font-family: var(--sans);
+	font-weight: var(--normal-weight);
+	font-size: 17px;
+	vertical-align: baseline;
 }
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
 body {
+	margin: auto;
 	background-color: var(--bg-color);
 	color: var(--fg-color);
-	line-height: 1.5;
-	margin: auto;
+	line-height: 1.5;	
 	text-indent: 0;
 }
-*,
-::before,
-::after {
+
+*, ::before, ::after {
 	box-sizing: inherit;
 	margin: 0;
 	padding: 0;
@@ -83,267 +77,297 @@ body {
 	background-color: transparent;
 	color: inherit;
 }
+
 a {
 	text-decoration: none;
 	border-bottom: dotted var(--link-underline-height);
 	cursor: revert;
 }
-a:focus {
-	outline: var(--line-outline-width) solid;
-	outline-offset: var(--line-outline-width);
-	border-radius: .75rem;
-	border-bottom: dotted var(--link-underline-height) transparent;
-}
+
 a:link {
 	color: var(--link-color);
 }
+
 a:visited {
 	color: var(--visited-link-color);
 }
-ol,
-ul,
-menu {
+
+a:focus { 
+	outline: none; 
+}
+
+a:focus-visible {
+	outline: var(--line-outline-width) solid;
+	outline-offset: var(--line-outline-width);
+	border-bottom-color: transparent;
+}
+
+ol, ul, menu {
 	list-style: none;
 }
-header,
-.header,
-h1,
-h2,
-h4,
-h5,
-.question,
-.topNav select,
-.indented {
-	max-width: var(--width);
-	width: 90%;			
-	margin: auto;
+
+ul.indented {
+	padding-left: 1em;
 }
-header .indented,
-.header .indented {
-	width: 100%;
+
+li {
+	font-size: 1.1rem;
 }
-img.indented {
-	display: block;
-	padding-left: 0;
-	padding-right: 0;
-	margin-top: 1rem;
+
+li+li {
+	margin-top: 0.5rem;
+}
+
+h1.title {
+	font-size: 3rem;
+	margin: 2rem 0 1rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.7rem;
+	font-weight: var(--bold-weight);
+	line-height: 1.07;
 	margin-bottom: 1rem;
 }
+
 h2 {
-	margin-top: 2rem;
-	font-size: 1.66rem;
-	font-weight: bold;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
+	font-size: 1.6rem;
+	font-weight: 700;
 }
+
 .header h2 {
 	margin-top: 1rem;
 }
-.indented {
-	padding-left: 2em;
-	padding-right: 2em;
+
+h3, h5 {
+	font-size: 1.1rem;
+	font-weight: var(--bold-weight);
 }
-li:before {
-	font-family: var(--mono);
-	font-weight: bold;
-	content: "";
-}
-li {
-	font-size: 1.25rem;
-}
-li+li {
-	margin-top: .5rem;
-}
-ul.indented {
-	padding-left: 0;
-}
-h3,h5 {
-	font-size: 1.25rem;
-}
+
 h4 {
 	font-size: 0.9rem;
 	font-weight: var(--bold-weight);
-	margin-bottom: 1em;
-	margin-top: -1.50em;
+	margin: -1.5em 0 1em;
 	text-align: justify;
 }
-h5 {
-	font-weight: var(--bold-weight);
-}
+
 .question h4 {
 	margin-top: -0.4em;
 	width: 100%;
 }
-h1.title {
-	font-size: 3rem;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	text-align: center;
-}
-h1 {
-	font-size: 2.1em;
-	line-height: 1.07em;
-	margin-bottom: 1rem;
-}
-.question {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	border: .1em solid currentColor;
-	border-radius: 1em;
-}
-.answer-row:hover,
-h3.hidden-title:hover {
-	outline: var(--summary-outline-width) dotted;
-}
-.answer-row:focus,
-h3.hidden-title:focus {
-	outline: var(--summary-outline-width) solid;
-}
-h3.hidden-title {
-	cursor: pointer;
-	border-radius: .75em;
-	border: var(--summary-outline-width) solid transparent;
-	padding-left: .5em;
-	margin-left: -.5em;
-}
-.answers {
-	display: table;
-	width: 100%;
-	margin-top: .5rem;
-}
-a.answer-row {
-	display: table-row;
-	cursor: pointer;
-	width: 100%;
-	border-radius: .75em;
-	border: var(--summary-outline-width) solid transparent;
-	color: var(--link-color);
-}
-.answer-label {
-	font-family: var(--mono);
-	font-style: normal;
-	font-weight: bold;
-	display: table-cell;
-	padding-left: .5em;
-	padding-right: .5em;
-	text-align: right;
-	white-space: nowrap;
-}
-.answer-cell {
-	display: table-cell;
-	width: 100%;
-	padding-right: 0.5em;
-}
-.answer {
-	display: block;
+
+p {
 	text-align: justify;
+	margin-bottom: 1rem;
 }
-.gap {
-	font-size: .25em;
+
+em {
+	font-weight: bold;
 }
+
+.upper {
+	text-transform: uppercase;
+}
+
+main, .topNav select {
+	max-width: var(--width);
+	width: 90%;			
+	margin: auto;
+}
+
 main {
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding: 2em 0;
 }
+
+div.toc {
+	margin-bottom: 2rem;
+}
+
 .header img {
 	float: left;
+	height: 290px;
 	margin-right: 2em;
-	
 }
+
 .header::after {
 	content: "";
 	clear: both;
 	display: table;
 }
-.upper {
-	text-transform: uppercase;
+
+img.sectionImg {
+	display: block;
+	width: 100%;
+	margin: 1rem 0;
+	padding: 0;
 }
-.header p {
+
+.question {
+	max-width: var(--width);
+	margin: 1rem auto;
+	padding-bottom: 1em;
+}
+
+.answers {
+	width: 100%;
+	margin-top: var(--row-gap);
+}
+
+.answers.title {
+	font-weight: var(--bold-weight);
+}
+
+.answers.title .answer-label {
+	text-align: left;
+}
+
+.answers.offset {
+	margin-left: calc(-1 * var(--label-width));
+	width: calc(100% + var(--label-width));
+}
+
+div.answer-row {
+	display: flex;
+	cursor: pointer;
+	width: 100%;
+	margin: var(--row-gap) 0;
+}
+
+.answers.no-padding div.answer-row {
+	margin:0
+}
+
+.answers.no-padding div.answer-row + div.answer-row {
+	margin-top: calc(-1 * var(--cell-border));
+}
+
+div.answer-row:hover .answer-cell {
+	background-color: lightyellow;
+}
+
+.answer-label {
+	flex: 0 0 var(--label-width); 
+	white-space: nowrap;
+	
+	font-family: var(--mono);
+	font-weight: 700;	
+	text-align: right;
+	
+	padding-right: 0.5em;
+}
+.answer-cell {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 0 0.5em;
+	border: var(--cell-border) solid #000;
+}
+
+.answer {
+	display: block;
 	text-align: justify;
-	margin-bottom: 1rem;
+	color: darkblue;
 }
+
+.gap {
+	font-size: 0.25em;
+}
+
 .answer-header {
-	display: table-row;
+	display: flex;
+	font-weight: var(--bold-weight);
 }
+
+.answer-header .answer-cell {
+	border: none;
+}
+
+
 .answer-col {
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
 	padding-right: 0.5em;
 }
+
 .answer-header .answer-col {
 	vertical-align: bottom; 
 }
-em {
-	font-weight: bold;
-}
-.header img {
-	height: 200px;
-}
+
 .top {
 	position: fixed;
-	bottom: 20px;   
 	right: 20px;
-	width:45px;
+	bottom: 20px;   
+	
+	width: 45px;
+	aspect-ratio: 1;
+	
 	display: block;
-	transition: opacity 0.5s ease-out;
 	opacity: 0;
 	cursor: default;
-	aspect-ratio:1;
+	transition: opacity 0.5s ease-out;
+
 	background: #134F8F;
 	border-radius:10px;
 }
+
 .top.visible {
 	opacity: 1;
 	cursor: pointer;
 }
-.top:before {
-	content:"";
-	position:absolute;
-	inset:30%;
-	transform:translateY(20%) rotate(-45deg);
-	border-top:5px solid #fff;
-	border-right:5px solid #fff;
+
+.top::before {
+	content: "";
+	position: absolute;
+	inset: 30%;
+	transform: translateY(20%) rotate(-45deg);
+	border-top: 5px solid #fff;
+	border-right: 5px solid #fff;
 }
+
 .topNav {
-	background-color: #134F8F;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	position: fixed;	
+	position: fixed;
 	width: 100%;
 	display: none;
+
+	background-color: #134F8F;
+	padding: 1em 0;
 }
+
 .topNav select {
 	display: block;
 	width: 100%;
-	padding: 0.375rem 2rem 0.375rem 2rem;
+	
+	padding: 0.375rem 2rem;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	color: white;
+	
+	color: #fff;
 	background-color: transparent;
+	
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
 	background-position: right 0.75rem center;
 	background-size: 16px 12px;
+	
 	border: 0.1em solid currentColor;
 	border-radius: 0.75em;
+	appearance: none;	
 	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-	appearance: none;		
-	white-space:nowrap; 
-	overflow:hidden; 
+
+	white-space: nowrap; 
+	overflow: hidden; 
 	text-overflow: ellipsis;
 }
-.topNav select option,
-.topNav select optgroup {
-	color: black;
+.topNav select option, .topNav select optgroup {
+	color: #000;
 }
 body.hasNavBar .topNav {
 	display: block;
 }
-body.hasNavBar h1,
-body.hasNavBar h2 {
+body.hasNavBar h1, body.hasNavBar h2 {
 	scroll-margin-top: 5rem;
 }
 body.hasNavBar main {
@@ -352,416 +376,541 @@ body.hasNavBar main {
 </style>
 
 <script>
-/*InvisiClues.js v2.1*/
-var invisiClues = {
+/*InvisiClues.js v2.2*/
+const invisiClues = {
 	index: 1,	
 	numberedList: false,
+	orderedList: true,
 	displayTOC: true,
+	offsetAnswers: false,
+	singleBulletPoints: false,
+	uppercaseHeaders: false,
+	noPadding: false,
 	scrollTopPos: 0,
 	navSections: [],
-	processJSON: function() {
-		var data = JSON.parse(document.getElementById('jsonData').textContent);
-		var main = document.getElementById('section0');
-		
+	
+	dom: {
+		body: null,
+		main: null,
+		toc: null,
+		navSelect: null,
+		topLink: null
+	},
+	
+	applyConfig(data) {
 		if ('numberedList' in data) {
 			this.numberedList = data.numberedList;
 		}
 		if ('displayTOC' in data) {
 			this.displayTOC = data.displayTOC;
 		}
+		if ('offsetAnswers' in data) {
+			this.offsetAnswers = data.offsetAnswers;
+		}
+		if ('singleBulletPoints' in data) {
+			this.singleBulletPoints = data.singleBulletPoints;
+		}
+		if ('uppercaseHeaders' in data) {
+			this.uppercaseHeaders = data.uppercaseHeaders;
+		}
+		if ('orderedList' in data) {
+			this.orderedList = data.orderedList;
+		}
+		if ('noPadding' in data) {
+			this.noPadding = data.noPadding;
+		}
+	},
+	
+	buildTOC(main) {
+		const tocTitle = this.titleElement("Table of Contents", "h2", false, false, true);
+		tocTitle.id = "toc";
+		main.appendChild(tocTitle);
+
+		const tocDiv = document.createElement("div");
+		tocDiv.className = "toc";
+
+		const ul = document.createElement("ul");
+
+		tocDiv.appendChild(ul);
+		main.appendChild(tocDiv);
+
+		const introLi = this.tocElement("section0", "Introduction", true);
+		ul.appendChild(introLi);
+
+		this.navElement("section0", "Introduction");
+		this.navElement("toc", "Table of Contents");
+
+		return ul;
+	},
+  
+	processJSON() {
+		const jsonEl = document.getElementById("jsonData");
+		if (!jsonEl) return;
 		
-		this.processHeader(main, data.header);
-				
-				
-		if (this.displayTOC) {
-			var tocElem = this.processTOC(main);	
-			var liElem = this.tocElement('section0', 'Introduction', true);
-			this.navElement('section0', 'Introduction');
-			tocElem.appendChild(liElem);	
-			this.navElement('toc', 'Table of Contents');
-		} else {
-			var tocElem = null;
-		};		
-		if ('sections' in data) {
-			for (var i = 0; i < data.sections.length; i++) {
-				this.processSection(main, data.sections[i], tocElem, true);
-			}
+		const data = JSON.parse(jsonEl.textContent || "{}");
+		
+		this.dom.body = document.body;
+		this.dom.main = document.getElementById("section0");
+		
+		if (!this.dom.main) return;
+		
+		this.applyConfig(data);		
+		
+		this.processHeader(this.dom.main, data.header);
+		
+		const tocList = this.displayTOC ? this.buildTOC(this.dom.main) : null;
+		
+		const sections = data.sections ?? [];
+		for (let i = 0; i < sections.length; i++) {
+			this.processSection(this.dom.main, sections[i], tocList, this.uppercaseHeaders);
 		}
-		if (this.displayTOC) {
-			document.querySelector("body").setAttribute('class', 'hasNavBar');
-			window.addEventListener("resize", this.refreshTopPos);
-			window.addEventListener("scroll", this.toggleTopButton);
-			window.addEventListener("scrollend", this.refreshNavBar);
-			document.querySelector(".topNav select").addEventListener("change", this.navSection);			
-			this.populateNavSections();
-			this.refreshTopPos();
-			this.refreshNavBar();
-			document.querySelector(".topNav select").focus();
+		
+		if (!this.displayTOC) return;
+		
+		this.dom.body.classList.add("hasNavBar");
+		this.dom.navSelect = document.querySelector(".topNav select");
+		this.dom.topLink = document.querySelector("a.top");
+		this.dom.toc = document.getElementById("toc");
+		
+		window.addEventListener("resize", () => this.refreshTopPos());
+		window.addEventListener("scroll", () => this.toggleTopButton());
+		window.addEventListener("scrollend", () => this.refreshNavBar());
+		
+		if (this.dom.navSelect) {
+			this.dom.navSelect.addEventListener("change", this.navSection);
+			this.dom.navSelect.focus();
 		}
+		
+		this.populateNavSections();
+		this.refreshTopPos();
+		this.refreshNavBar();
 	},
-	populateNavSections: function () {
-		var navSections = document.querySelectorAll('.navSection');
-		this.navSections = [...navSections];
-		this.navSections.reverse();
+	
+	populateNavSections() {
+		this.navSections = Array.from(document.querySelectorAll(".navSection")).reverse()
 	},
-	refreshTopPos: function() {
-		var toc = document.getElementById("toc");
-		invisiClues.scrollTopPos = toc.offsetTop;
+	
+	refreshTopPos() {
+		const toc = this.dom.toc ?? document.getElementById("toc");
+		if (!toc) return;
+		this.scrollTopPos = toc.offsetTop;
 	},
-	refreshNavBar: function () {
-		for (var i = 0; i < invisiClues.navSections.length; i++) {
-			var navSection = invisiClues.navSections[i];
-			if (navSection.offsetTop < scrollY + 100) {
-				document.querySelector(".topNav select").value = '#' + navSection.id;
+	
+	refreshNavBar() {
+		const select = this.dom.navSelect ?? document.querySelector(".topNav select");
+		if (!select) return;
+	
+		for (let i = 0; i < this.navSections.length; i++) {
+			const s = this.navSections[i];
+			if (s.offsetTop < window.scrollY + 100) {
+				select.value = `#${s.id}`;
 				break;
 			}
 		}
 	},
-	toggleTopButton: function() {
-		var top = document.querySelector("a.top");
-		var scrollY = this.scrollY || 0;
-		if (scrollY > invisiClues.scrollTopPos + 30) {
-			top.setAttribute('class', 'top visible');
-			top.setAttribute('href', '#toc');
+	toggleTopButton() {
+		const top = this.dom.topLink ?? document.querySelector("a.top");
+		if (!top) return;
+		
+		const y = window.scrollY || 0;
+		if (y > this.scrollTopPos + 30) {
+			top.className = "top visible";
+			top.href = "#toc";
 		} else {
-			top.setAttribute('class', 'top');
-			top.removeAttribute('href');
+			top.className = "top";
+			top.removeAttribute("href");
 		}
 	},
-	simpleElement: function(type, data) {
-		var elem = document.createElement(type);
-		elem.innerHTML = data;
-		return elem;
+	
+	simpleElement(type, html) {
+		const el = document.createElement(type);
+		el.innerHTML = html ?? "";
+		return el;
 	},
-	processHeaderSection: function(headerElem, section) {
-		if ('title' in section) {
-			headerElem.appendChild(this.simpleElement('h3', section.title));
+	
+	processHeaderSection(headerElem, section) {
+		if (!section) return;
+		
+		if (section.title) {
+			headerElem.appendChild(this.simpleElement("h3", section.title));
 		}
-		if ('content' in section) {
-			for (var i = 0; i < section.content.length; i++) {
-				headerElem.appendChild(this.simpleElement('p', section.content[i]));
-			}
+		
+		const content = section.content ?? [];
+		
+		for (let i = 0; i < content.length; i++) {
+			headerElem.appendChild(this.simpleElement("p", content[i]));
 		}
 	},
-	processHeader: function(main, header) {
-		var headerElem = document.createElement('div');
-		headerElem.setAttribute('class', 'header');
-		if ('image' in header) {
-			var imgElem = document.createElement('img');
-			imgElem.setAttribute('src', header.image);
-			headerElem.appendChild(imgElem);
+	
+	processHeader(main, header) {
+		if (!header) return;
+		
+		const headerElem = document.createElement('div');
+		headerElem.className = "header";
+		
+		if (header.image) {
+			const img = document.createElement("img");
+			img.src = header.image;
+			headerElem.appendChild(img);
 		}
-		if ('title' in header) {
-			headerElem.appendChild(this.simpleElement('h1', header.title + ' InvisiClues™'));
+		
+		if (header.title) {
+			headerElem.appendChild(this.simpleElement("h1", `${header.title} InvisiClues™`));
 		}
-		headerElem.appendChild(this.simpleElement('h2', "Introduction"));
-		if ('section1' in header) {
-			this.processHeaderSection(headerElem, header.section1);
-		}
-		if ('section2' in header) {
-			this.processHeaderSection(headerElem, header.section2);
-		}
-		if ('sampleQuestions' in header) {
-			var sampleElem = document.createElement('div');
-			this.processSection(sampleElem, header.sampleQuestions, false);
+		
+		headerElem.appendChild(this.simpleElement("h2", "Introduction"));
+		
+		this.processHeaderSection(headerElem, header.section1);
+		this.processHeaderSection(headerElem, header.section2);
+		
+		if (header.sampleQuestions) {
+			const sampleElem = document.createElement("div");
+			this.processSection(sampleElem, header.sampleQuestions, null, false, null);
 			headerElem.appendChild(sampleElem);
 		}
-		if ('section3' in header) {
-			this.processHeaderSection(headerElem, header.section3);
-		}
+
+		this.processHeaderSection(headerElem, header.section3);
+
 		main.appendChild(headerElem);
 	},
-	processTOC: function(main) {
-		var tocElem = this.titleElement('Table of Contents', 'h2', false, false, true);
-		tocElem.setAttribute('id', 'toc');
-		main.appendChild(tocElem);
-		var elem = document.createElement('ul');
-		elem.setAttribute('class', 'indented');
-		main.appendChild(elem);
-		return elem;
-	},
-	tocElement: function(sectionId, title, hasQuestions) {
-		var elem = document.createElement('li');
-		if (hasQuestions) {
-			var aElem = document.createElement('a');
-			aElem.innerHTML = title;
-			aElem.setAttribute('href', '#' + sectionId);
-			elem.appendChild(aElem);
-		} else {
-			elem.innerHTML = title;
+	
+	tocElement(sectionId, title, hasQuestions) {
+		const li = document.createElement("li");
+		if (!hasQuestions) {
+			li.innerHTML = title;
+			return li;
 		}
-		return elem;
+		
+		const a = document.createElement("a");
+		a.innerHTML = title;
+		a.href = `#${sectionId}`;
+		li.appendChild(a);
+		return li;
 	},
-	navGroup: function (title) {
-		var optGroup = document.createElement('optgroup');
-		optGroup.setAttribute('label', title);
-		document.querySelector(".topNav select").appendChild(optGroup);
-		return optGroup;
+	
+	navGroup(title) {
+		const select = document.querySelector(".topNav select");
+		if (!select) return null;
+
+		const group = document.createElement("optgroup");
+		group.label = title;
+		select.appendChild(group);
+		return group;
 	},
-	navElement: function (sectionId, title, optGroup) {
-		var opt = document.createElement('option');
-		opt.setAttribute('value', '#' + sectionId);
+	
+	navElement(sectionId, title, optGroup) {
+		const select = document.querySelector(".topNav select");
+		if (!select) return;
+
+		const opt = document.createElement("option");
+		opt.value = `#${sectionId}`;
 		opt.innerHTML = title;
-		if (optGroup) {
-			optGroup.appendChild(opt);
-		} else {
-			document.querySelector(".topNav select").appendChild(opt);
-		}
+
+		(optGroup ?? select).appendChild(opt);
 	},
-	processSection: function(main, section, ulElem, upper, optGroup) {
-		if ('title' in section && section.title != '') {
-			if (!('toc' in section)) {
-				section.toc = true;
+	
+	processSection(main, section, tocUl, upper, optGroup) {
+		if (!section) return;
+		
+		let liElem = null;
+		
+		const titleText = section.title ?? "";
+		if (titleText !== "") {
+			const tocEnabled = section.toc ?? true;
+			const tocTitle = section.tocTitle ?? titleText;
+			
+			if (Object.prototype.hasOwnProperty.call(section, "upper")) {
+				upper = !!section.upper;
 			}
-			var title = section.title;
-			if ('tocTitle' in section) {
-				var tocTitle = section.tocTitle;
-			} else {
-				var tocTitle = section.title;
-			}
-			if ('upper' in section) {
-				upper = section.upper;
-			}
-			var titleElem = this.titleElement(section.title, (section.toc ? 'h2' : 'h5'), section.toc, upper, section.toc);
-			var sectionId = titleElem.getAttribute('id');
-			main.appendChild(titleElem);	
-			if (ulElem && section.toc) {
-				var hasQuestions = 'questions' in section && section.questions.length > 0;
-				var hasQuestions = hasQuestions || ('images' in section && section.images.length > 0);
-				var liElem = this.tocElement(sectionId, tocTitle, hasQuestions);
+			
+			const titleEl = this.titleElement(titleText, tocEnabled ? "h2" : "h5", tocEnabled, upper, tocEnabled);
+
+			const sectionId = titleEl.id;
+			main.appendChild(titleEl);
+			
+			if (tocUl && tocEnabled) {
+				const hasQuestions = (section.questions?.length ?? 0) > 0 || 
+					(section.images?.length ?? 0) > 0 || 
+					(section.paragraphs?.length ?? 0) > 0;
+					
+				liElem = this.tocElement(sectionId, tocTitle, hasQuestions);
+				tocUl.appendChild(liElem);
+				
 				if (hasQuestions) {
 					this.navElement(sectionId, tocTitle, optGroup);
 				}
-				ulElem.appendChild(liElem);
-			} else {
-				var liElem = null;
 			}
 		}
-		if ('subTitle' in section && section.subTitle != '') {
-			main.appendChild(this.titleElement(section.subTitle, 'h4', false, false));
-		}
-		if ('questions' in section) {
-			for (var i = 0; i < section.questions.length; i++) {
-				main.appendChild(this.questionElement(section.questions[i]));
-			}
-		}
-		if ('images' in section) {
-			for (var i = 0; i < section.images.length; i++) {
-				main.appendChild(this.imageElement(section.images[i]));
-			}
-		}
-		if ('subSections' in section) {
-			if (section.subSections.length > 0) { 
-				var subOptGroup = this.navGroup(tocTitle);
-				for (var i = 0; i < section.subSections.length; i++) {
-					if (liElem) {
-						var ulSubElem = document.createElement('ul');
-						ulSubElem.setAttribute('class', 'indented');
-						liElem.appendChild(ulSubElem);
-					} else {
-						var ulSubElem = null;
-					}
-					this.processSection(main, section.subSections[i], ulSubElem, false, subOptGroup);
-				}
-			}
-		}
-	},
-	titleElement: function(text, type, setId, upper, navSection) {
-		var elem = document.createElement(type);
-		if (setId) {
-			elem.setAttribute('id', 'section' + this.index);
-			this.index ++;
-		}
-		var classList = [];
-		if (upper) {
-			classList.push('upper');
-		}
-		if (navSection) {
-			classList.push('navSection');
-		}
-		if (classList.length > 0) {
-			elem.setAttribute('class', classList.join(' '));
-		}
-		elem.innerHTML = text;
 		
-		return elem;
+		if (section.subTitle) {
+			main.appendChild(this.titleElement(section.subTitle, "h4", false, false, false));
+		}
+		
+		const paragraphs = section.paragraphs ?? [];
+		for (let i = 0; i < paragraphs.length; i++) {
+			main.appendChild(this.simpleElement("p", paragraphs[i]));
+		}
+		
+		if (Array.isArray(section.questions)) {
+			const hiddenTitles = !!section.hiddenTitles;
+			for (let i = 0; i < section.questions.length; i++) {
+				main.appendChild(this.questionElement(section.questions[i], i, hiddenTitles));
+			}
+		}
+		
+		const images = section.images ?? [];
+		for (let i = 0; i < images.length; i++) {
+			main.appendChild(this.imageElement(images[i]));
+		}
+		
+		const subs = section.subSections ?? [];
+		if (subs.length > 0) {
+			const groupTitle = section.tocTitle ?? section.title ?? "";
+			const subGroup = this.navGroup(groupTitle);
+			
+			for (let i = 0; i < subs.length; i++) {
+				let ulSub = null;
+				if (liElem) {
+					ulSub = document.createElement("ul");
+					ulSub.className = "indented";
+					liElem.appendChild(ulSub);
+				}
+				this.processSection(main, subs[i], ulSub, false, subGroup);
+			}
+		}
+    },
+	
+	titleElement(text, type, setId, upper, navSection) {
+		const el = document.createElement(type);
+
+		if (setId) {
+			el.id = `section${this.index}`;
+			this.index++;
+		}
+
+		const classes = [];
+		if (upper) classes.push("upper");
+		if (navSection) classes.push("navSection");
+		if (classes.length) el.className = classes.join(" ");
+
+		el.innerHTML = text ?? "";
+		
+		return el;
 	},
-	answerElement: function(label, ariaLabel, text, question) {
-		var elem = document.createElement('a');	
-		elem.setAttribute('class', 'answer-row');
-		if (!('alwaysShow' in question) || !question.alwaysShow) {
-			elem.addEventListener('click', this.toggle);
+	
+	answerElement(label, ariaLabel, text, question) {
+		const row = document.createElement("div");
+		row.className = "answer-row";
+		
+		const alwaysShow = !!question?.alwaysShow;
+		if (!alwaysShow) row.addEventListener("click", this.toggle);
+	
+
+		if (label) {
+			const lbl = document.createElement("div");
+			lbl.className = "answer-label";
+			lbl.innerHTML = label;
+			row.appendChild(lbl);
 		}
-		var answerLabel = document.createElement('div');
-		answerLabel.setAttribute('class', 'answer-label');
-		answerLabel.innerHTML = label;
-		elem.appendChild(answerLabel);
-		var answerCell = document.createElement('div');
-		answerCell.setAttribute('class', 'answer-cell');
-		answerCell.setAttribute('aria-label', ariaLabel);
-		answerCell.setAttribute('role', 'alert');
-		var answer = document.createElement('span');
-		answer.setAttribute('class', 'answer');
-		if (!('alwaysShow' in question) || !question.alwaysShow) {
-			answer.setAttribute('style', 'visibility:hidden');		
-		}
-		if ('columns' in question && Array.isArray(text)) {
-			for (var i = 0; i < question.columns.length; i++) {
-				var subAnswer = document.createElement('span');
-				subAnswer.setAttribute('class', 'answer-col');
-				var attributes = ['width: ' + question.columns[i].width];
-				if ('align' in question.columns[i]) {
-					attributes.push('text-align: ' + question.columns[i].align);
-				}
-				subAnswer.setAttribute('style', attributes.join('; '));
-				if (text.length > i) {
-					subAnswer.innerHTML = text[i];
-				}
-				answer.appendChild(subAnswer);
+		
+		const cell = document.createElement("div");
+		cell.className = "answer-cell";
+		cell.setAttribute("aria-label", ariaLabel ?? "");
+		cell.setAttribute("role", "alert");
+		
+		const ans = document.createElement("span");
+		ans.className = "answer";
+		if (!alwaysShow) ans.style.visibility = "hidden";
+		
+		if (Array.isArray(text) && Array.isArray(question?.columns)) {
+			for (let i = 0; i < question.columns.length; i++) {
+				const col = question.columns[i];
+				const sub = document.createElement("span");
+				sub.className = "answer-col";
+				
+				const styles = [`width: ${col.width}`];
+				if (col.align) styles.push(`text-align: ${col.align}`);
+				sub.setAttribute("style", styles.join("; "));
+				
+				sub.innerHTML = text[i] ?? "";
+				ans.appendChild(sub);
 			}
 		} else {
-			answer.innerHTML = text;
+			ans.innerHTML = text ?? "";
 		}
-		answerCell.appendChild(answer);
-		elem.appendChild(answerCell);
 		
-		return elem;
-	},
-	answerGap: function() {
-		var gap = document.createElement('div');
-		gap.setAttribute('class', 'gap');
-		gap.appendChild(document.createTextNode('\u2009'));
+		cell.appendChild(ans);
+		row.appendChild(cell);
 		
-		return gap;
+		return row;
 	},
-	columnHeaders: function(columns) {
-		var header = document.createElement('div'); 
-		header.setAttribute("class","answer-header");
-		var answerLabel = document.createElement('div');
-		answerLabel.setAttribute('class', 'answer-label');
-		header.appendChild(answerLabel);
-		var answerCell = document.createElement('div');
-		answerCell.setAttribute('class', 'answer-cell');
-		for (var i = 0; i < columns.length; i++) {
-			var subAnswer = document.createElement('span');
-			subAnswer.setAttribute('class', 'answer-col');
-			var attributes = ['width: ' + columns[i].width];
-			if ('align' in columns[i]) {
-				attributes.push('text-align: ' + columns[i].align);
-			}
-			subAnswer.setAttribute('style', attributes.join('; '));
-			subAnswer.appendChild(document.createTextNode(columns[i].header));
-			answerCell.appendChild(subAnswer);
+		
+	columnHeaders(hasLabel, columns) {
+		const header = document.createElement("div");
+		header.className = "answer-header";
+	
+		if (hasLabel) {
+			const lbl = document.createElement("div");
+			lbl.className = "answer-label";
+			header.appendChild(lbl);
 		}
-		header.appendChild(answerCell);			
+		
+		const cell = document.createElement("div");
+		cell.className = "answer-cell";
+		
+		for (let i = 0; i < columns.length; i++) {
+			const col = columns[i];
+			const span = document.createElement("span");
+			span.className = "answer-col";
+			
+			const styles = [`width: ${col.width}`];
+			if (col.align) styles.push(`text-align: ${col.align}`);
+			span.setAttribute("style", styles.join("; "));
+			
+			span.appendChild(document.createTextNode(col.header ?? ""));
+			cell.appendChild(span);
+		}
+		
+		header.appendChild(cell);		
 		return header;
 	},
-	answersElement: function(question) {
-		var elem = document.createElement('div');
-		var classes = ['answers'];
-		if ('anyAnswer' in question && question.anyAnswer) {
-			classes.push('anyAnswer');
-		}
-		elem.setAttribute('class',classes.join(' '));
-		if ('columns' in question) {
-			if (!('columnHeaders' in question) || question.columnHeaders) {
-				elem.appendChild(this.columnHeaders(question.columns));
-			}
-		}
-		var ariaLabel = '';
-		var label = '';
-		var numberedList = this.numberedList;
-		if ('numberedList' in question) {
-			numberedList = question.numberedList;
+	
+	indexToLetters(i) {
+		return String.fromCharCode(65 + (i % 26)).repeat(Math.floor(i / 26) + 1)
+	},
+	
+	answersElement(question) {
+		const q = question ?? {};
+		const answers = q.answers ?? [];
+		
+		const hasLabel = !!q.customLabels || !!q.orderedList;
+		
+		const wrapper = document.createElement("div");
+		const classes = ["answers"];
+		if (q.anyAnswer) classes.push("anyAnswer");
+		if (q.noPadding) classes.push("no-padding");
+		if (hasLabel && this.offsetAnswers) classes.push("offset");
+		wrapper.className = classes.join(" ");
+
+		if (q.columns && (q.columnHeaders ?? true)) {
+			wrapper.appendChild(this.columnHeaders(hasLabel, q.columns));
 		}
 		
-		for (var i = 0; i < question.answers.length; i++) {
-			var answer = question.answers[i];
-			if ('customLabels' in question && question.customLabels && Array.isArray(answer)) {
-				ariaLabel = answer.shift();
+		const numberedList = q.numberedList ?? this.numberedList;
+		const answerCount = answers.length;
+		
+		for (let i = 0; i < answerCount; i++) {
+			let answer = answers[i];
+
+			let ariaLabel = "";
+			let label = "";
+			
+			const singleBulletPoints = typeof q.singleBulletPoints === "boolean" ? q.singleBulletPoints : this.singleBulletPoints;
+			
+			if (q.customLabels && Array.isArray(answer)) {
+				ariaLabel = answer.shift() ?? "";
 				label = ariaLabel;
-			} else if (question.orderedList) {
-				if (numberedList) {
-					ariaLabel = (i + 1).toString();
+			} else if (q.orderedList) {
+				if (answerCount === 1 && !singleBulletPoints) {
+					ariaLabel = "";
+					label = " ";
 				} else {
-					ariaLabel = String.fromCharCode(65 + i % 26).repeat(Math.floor(i / 26) + 1);
-				}			
-				if ('listPrefix' in question) {
-					ariaLabel = question.listPrefix + ariaLabel;
+					ariaLabel = numberedList ? String(i + 1) : this.indexToLetters(i);
+					
+					if (q.listPrefix) ariaLabel = q.listPrefix + ariaLabel;
+					label = ariaLabel + (q.listSuffix ?? ".");
 				}
-				label = ariaLabel + ('listSuffix' in question ? question.listSuffix : '.');
+			}
+			
+			wrapper.appendChild(this.answerElement(label, ariaLabel, answer, q));
+		}
+		
+		return wrapper;
+	},
+	
+	questionElement(question, index, hiddenTitles) {
+		const q = question ?? {};
+		
+		const el = document.createElement("div");
+		const classes = ["question"];
+		if (q.class) classes.push(q.class);
+		el.className = classes.join(" ");
+		
+		if (q.title) {
+			let titleEl;
+						
+			if (hiddenTitles) {
+				titleEl = document.createElement("div");
+				titleEl.className = "answers title";
+				
+				const aria = String(index + 1);
+				const label = `${aria}.`;
+				titleEl.appendChild(this.answerElement(label, aria, q.title, { alwaysShow: false }));
 			} else {
-				label = '\u2022';
-				ariaLabel = '';
-			};
-			elem.appendChild(this.answerElement(label, ariaLabel, answer, question));
-			elem.appendChild(this.answerGap());						
-		}
-		return elem;
-	},
-	questionElement: function(question) {
-		var elem = document.createElement('div');	
-		var classes = ['question','indented'];
-		if ('class' in question) {
-			classes.push(question.class);
-		}
-		elem.setAttribute('class',classes.join(' '));
-		if ('title' in question && question.title != '') {
-			var titleElem = this.titleElement(question.title, 'h3', false, false);
-			var span = titleElem.querySelector('span');
-			if (span != null && span.classList.contains('hidden-title')) {
-				span.removeAttribute("class");
-				span.setAttribute("style", "visibility: hidden;");
-				var h3Elem = span.closest('h3');
-				h3Elem.setAttribute("class", "hidden-title");
-				h3Elem.addEventListener("click", this.toggleTitle);
+				titleEl = this.titleElement(q.title, "h3", false, false, false);
 			}
-			elem.appendChild(titleElem);
+			
+			el.appendChild(titleEl);
 		}
-		if ('subTitle' in question && question.subTitle != '') {
-			elem.appendChild(this.titleElement(question.subTitle, 'h4', false, false));
+		
+		if (q.subTitle) {
+			 el.appendChild(this.titleElement(q.subTitle, "h4", false, false, false));
 		}
-		if (!('orderedList' in question)) {
-			question.orderedList = (question.answers.length > 1);
+		
+		if (!Object.prototype.hasOwnProperty.call(q, "orderedList")) {
+			q.orderedList = this.orderedList;
 		}
-		elem.appendChild(this.answersElement(question));
-		return elem;
+		
+		if (!Object.prototype.hasOwnProperty.call(q, "noPadding")) {
+			q.noPadding = this.noPadding;
+		}
+
+		el.appendChild(this.answersElement(q));
+		return el;
 	},
-	imageElement: function(image) {
-		var elem = document.createElement('img');
-		elem.setAttribute('class', 'indented');
-		elem.setAttribute('src', image);
-		return elem;
+	
+	imageElement(src) {
+		const img = document.createElement("img");
+		img.className = "sectionImg";
+		img.src = src;
+		return img;
 	},
-	toggle: function() {
-		var span = this.querySelector('.answer');
-		var visible = (span.style.visibility !== "hidden");
-		var parent = span.closest('.answers');
-		var anyAnswer = parent.classList.contains('anyAnswer');
-		if (anyAnswer) {
-			span.setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
-		} else {
-			var answers = parent.querySelectorAll('.answer-row .answer-cell .answer');
-			if (visible) {
-				answers = [...answers];
-				answers.reverse();
-			}
-			for (var i = 0; i < answers.length; i++) {
-				answers[i].setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
-				if (span === answers[i]) {
-					break;
-				}
-			}
+	
+	toggle() {
+		const span = this.querySelector(".answer");
+		if (!span) return;
+		
+		const visible = span.style.visibility !== "hidden";
+		const parent = span.closest(".answers");
+		if (!parent) return;
+		
+		if (parent.classList.contains("anyAnswer")) {
+			span.style.visibility = visible ? "hidden" : "visible";
+			return;
+		}
+		
+		let answers = parent.querySelectorAll(".answer-row .answer-cell .answer");
+		answers = Array.from(answers);
+		
+		if (visible) answers.reverse();
+		
+		for (let i = 0; i < answers.length; i++) {
+			answers[i].style.visibility = visible ? "hidden" : "visible";
+			if (span === answers[i]) break;
 		}
 	},
-	toggleTitle: function() {
-		var span = this.querySelector('span');
-		var visible = (span.style.visibility !== "hidden");
-		span.setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
+	
+	toggleTitle() {
+		const span = this.querySelector("span");
+		if (!span) return;
+		
+		const visible = span.style.visibility !== "hidden";
+		span.style.visibility = visible ? "hidden" : "visible";
 	},
-	navSection: function () {
+	
+	navSection() {
 		location.href = this.value;
-		document.querySelector(".topNav select").focus();
+		document.querySelector(".topNav select")?.focus();
 	}
 }
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -779,6 +928,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <script id="jsonData" type="application/json">
 {
 	"revision": 1.0,
+	"orderedList": false,
+	"noPadding": true,
 	"header": {
 		"title": "Hollywood Hijinx",
 		"year": "1987",
@@ -808,7 +959,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			"questions": [
 				{
 					"title": "Why is the bureaucrat crying?",
-					"orderedList": false,
 					"answers": [
 						"Did you notice what the bureaucrat was holding?",
 						"He has only an inkpad.",
@@ -823,7 +973,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "How do I get inside the house?",
-					"orderedList": false,
                     "answers": [
                         "As the game begins, try walking east or west, then returning to the south junction (by going south).",
                         "Hmmm. The statue's facing a different direction. Peculiar, eh?",
@@ -838,7 +987,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is there anything I should do with the statue of Buck Palace, the fighting letter carrier?",
-					"orderedList": false,
                     "answers": [
                         "Yes, Buck is very important.",
                         "Have you noticed you can turn Buck to point in different directions?",
@@ -847,7 +995,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I can't get past the water buffalo in Charo's kitchen. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Drink all the water in any pond.",
                         "Squeeze your nose with a garlic mincer.",
@@ -858,7 +1005,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What should I do in the hedge maze?",
-					"orderedList": false,
                     "answers": [
                         "As you may have guessed, you'll need to get to a secret location within the maze.",
                         "The location of this spot is well-marked on a map of the maze.",
@@ -872,7 +1018,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Hey, the secret location in the maze isn't any different from the other spots in the maze! What gives?",
-					"orderedList": false,
                     "answers": [
                         "The location is cosmetically the same as any other in the maze...",
                         "...but looks aren't everything.",
@@ -883,7 +1028,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I open the small compartment under the cannon?",
-					"orderedList": false,
                     "answers": [
                         "You'll have to move the cannon off of the compartment's lid first.",
                         "Like most cannons, however, this one is much too heavy for a person to move.",
@@ -895,21 +1039,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Where can I find a source of fire?",
-					"orderedList": false,
                     "answers": [
                         "There's a match inside the mansion."
                     ]
                 },
                 {
                     "title": "How do I open the hatch at the cliff?",
-					"orderedList": false,
                     "answers": [
                         "You can't open it from above. You'll find a way to open it from below later on in the story."
                     ]
                 },
                 {
                     "title": "Is there a way to get the ladder up the cliff face?",
-					"orderedList": false,
                     "answers": [
                         "It's a pretty heavy ladder.",
                         "And such a steep cliff!",
@@ -918,7 +1059,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I get across the gap in the beach stairs?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't figured out how to get into the mansion, you won't be able to cross the gap. Go on to something else for now.",
                         "If you've gotten into the house and explored a little of the first floor, then this puzzle should be a downhill struggle.",
@@ -934,7 +1074,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "What should I do with the fireplace?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't already done so, you may want to ENTER THE FIREPLACE.",
                         "Have you tried removing the loose brick?",
@@ -944,7 +1083,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is there any significance to the painting of Uncle Buddy and Aunt Hildegarde?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "It's rather moving, isn't it?",
@@ -953,7 +1091,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Oh! I found a wall safe! How do I open it?",
-					"orderedList": false,
                     "answers": [
                         "You'll have to find the right combination.",
                         "The solution isn't exactly black and white.",
@@ -965,7 +1102,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What do I do in the closet?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried doing anything with the coat pegs?",
                         "Try typing PULL THE THIRD PEG.",
@@ -974,7 +1110,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is there anything I can do with the sawed-off peg in the closet?",
-					"orderedList": false,
                     "answers": [
                         "If you don't understand how the closet works, don't go on. Develop the clues in the question above this one.",
                         "You can't actually do anything with the sawed-off peg.",
@@ -984,7 +1119,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Can I do anything with the hole to the left of the first peg?",
-					"orderedList": false,
                     "answers": [
                         "If you don't understand how the closet works, don't go on. Develop the clues in the \"What do I do in the closet?\" question.",
                         "Since there was once a peg in this hole, there must be a floor below the cellar.",
@@ -994,7 +1128,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What's the point of the model of downtown Tokyo?",
-					"orderedList": false,
                     "answers": [
                         "EXAMINE THE MODEL.",
                         "This is a puzzle. To solve it you will need to obtain the Big Diamond Ring, which you'll find perched on the monument in the tiny park.",
@@ -1003,7 +1136,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What is an Atomic Chihuahua?",
-					"orderedList": false,
                     "answers": [
                         "It's a chihuahua which has received an extreme amount of radiation (and isn't too happy about it either).",
                         "It's also the subject of one of your Uncle Buddy's more mundane motion",
@@ -1012,7 +1144,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How can destroy the tanks?",
-					"orderedList": false,
                     "answers": [
                         "A pressing problem, huh?",
                         "Figure out what each of the colored buttons does.",
@@ -1023,7 +1154,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I defeat the puny planes?",
-					"orderedList": false,
                     "answers": [
                         "Have you figured out what each of those buttons does?",
                         "The red button would certainly do the trick, but...",
@@ -1033,7 +1163,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How should I deal with the Japanese marines in the park?",
-					"orderedList": false,
                     "answers": [
                         "I suppose the black button would be quite effective.",
                         "But most of the marines, being veritable pillars of agility, would be able to scatter and escape the Atomic Chihuahua's wrath.",
@@ -1044,7 +1173,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How can I stop the missile from destroying the Atomic Chihuahua?",
-					"orderedList": false,
                     "answers": [
                         "Pressing the red button will do the job but...",
                         "...fuel is precious, and there's a better way to defeat the missile.",
@@ -1056,7 +1184,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How can I tell the Atomic Chihuahua to take the Big Diamond Ring?",
-					"orderedList": false,
                     "answers": [
                         "First, you'll have to get the Chihuahua to the east end of the park.",
                         "Once you're there, just PRESS THE BLUE BUTTON."
@@ -1064,7 +1191,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "The Chihuahua has the Big Diamond Ring. Now what?",
-					"orderedList": false,
                     "answers": [
                         "You want to take the ring from him.",
                         "Since the model is encased in thick plastic, it won't be easy.",
@@ -1076,7 +1202,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I'm pressing the red button but the Atomic Chihuahua is only gagging. What's wrong?",
-					"orderedList": false,
                     "answers": [
                         "Due to limited resources, the Atomic Chihuahua can breathe fire only three times.",
                         "So you'd better make each use of the red button count.",
@@ -1085,7 +1210,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I get up the stairs in the foyer?",
-					"orderedList": false,
                     "answers": [
                         "You won't be able to stop the stairs from flattening out until you've been to the second floor.",
                         "You'll have to come up with another way to get upstairs."
@@ -1093,7 +1217,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I get to the second floor?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried walking up the stairs?",
                         "Hmmm. It's too bad this house doesn't have an elevator.",
@@ -1103,28 +1226,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "When I show the slide, all that appears on the screen is a blur of colored light. What's going on?",
-					"orderedList": false,
                     "answers": [
                         "Did you remember to focus the slide projector?"
                     ]
                 },
                 {
                     "title": "When I show the film strip, nothing appears on the screen. What's the matter?",
-					"orderedList": false,
                     "answers": [
                         "Did you remember to remove the lens cap?"
                     ]
                 },
                 {
                     "title": "Am I a victim of subliminal advertising when I show the film strip?",
-					"orderedList": false,
                     "answers": [
                         "No."
                     ]
                 },
                 {
                     "title": "Okay, what am I supposed to do in the Projection Booth?",
-					"orderedList": false,
                     "answers": [
                         "There is a message on the slide and the strip of film.",
                         "Viewing the slide by itself or the strip of film by itself reveals only meaningless bits and pieces of the message.",
@@ -1134,7 +1253,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is the box of Cuban cigars important?",
-					"orderedList": false,
                     "answers": [
                         "It was to Uncle Buddy.",
                         "Don't go on unless you've discovered the bust of Fidel Castro.",
@@ -1143,7 +1261,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What can I do with the piano?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried playing it?",
                         "Playing the right song might cause something to happen.",
@@ -1153,7 +1270,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is there a way to enter the passage to the north of the crawlspace?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "The entrance to the passage is large enough for you to enter, but it's partially blocked by the ceiling.",
@@ -1162,7 +1278,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I raise the ceiling in the crawlspace?",
-					"orderedList": false,
                     "answers": [
                         "Since the ceiling is balanced across a wooden beam, you can think of the ceiling as a see-saw of sorts.",
                         "If you could tip the ceiling down in one half of the crawlspace, it would effectively raise the ceiling in the other half.",
@@ -1173,7 +1288,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I remove one of the pillars?",
-					"orderedList": false,
                     "answers": [
                         "The ceiling of the crawlspace is very heavy. As the game starts, removing the pillars is impossible, since the ceiling's weight is evenly distributed.",
                         "If you could redistribute the ceiling's weight to one end of the crawlspace, you'd be able to remove the pillar at the other end.",
@@ -1189,7 +1303,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "How do I open the panel in the ceiling?",
-					"orderedList": false,
                     "answers": [
                         "\"It won't budge from this side.\"",
                         "Oh well. At least you've learned that there's a room above this floor.",
@@ -1198,7 +1311,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I know that there's a room above the second floor, but I don't know how to get there.",
-					"orderedList": false,
                     "answers": [
                         "You'll need to use the closet/elevator to get there.",
                         "Have you ever been on top of the closet, by walking through one of the closet doors when the elevator is one floor below?",
@@ -1215,14 +1327,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What the heck is a newel?",
-					"orderedList": false,
                     "answers": [
                         "It's a wooden knob, mounted on the bannister at the bottom or (in this case) the top of a staircase."
                     ]
                 },
                 {
                     "title": "What's so unusual about the newel?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried examining it?",
                         "Have you tried turning it?",
@@ -1232,7 +1342,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I get the velvet sack?",
-					"orderedList": false,
                     "answers": [
                         "If you merely open the window, the sack will fall to the ground, damaging its contents.",
                         "Since the top of the sack is sticking out from under the window, you can HOLD THE SACK before you OPEN THE WINDOW."
@@ -1245,7 +1354,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "What can I put in the computer's slot?",
-					"orderedList": false,
                     "answers": [
                         "It's a pretty old contraption which dates back before the days of magnetic storage devices.",
                         "So, the slot probably accepts punch cards."
@@ -1253,7 +1361,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Egads! How do I remove the floppy disk from the disk drive!",
-					"orderedList": false,
                     "answers": [
                         "Just open up the disk drive on your computer at home and remove the copy of <em>Hollywood Hijinx</em> from the drive. It's that simple.",
                         "Of course, if you have a hard drive, this is not recommended."
@@ -1261,7 +1368,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Okay, how many cards will I need, and where will I find them?",
-					"orderedList": false,
                     "answers": [
                         "You'll need seven cards — one for each row of lights on the computer's display.",
                         "You should only develop the following seven clues if you're in dire need. Developing one of them will likely give away another puzzle in the game.",
@@ -1277,7 +1383,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Do I have to insert the cards in any order?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "Some of you may realize that the colors of the cards correspond to the colors of the rainbow.",
@@ -1288,7 +1393,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I've put the cards into the computer in the correct order. Now what?",
-					"orderedList": false,
                     "answers": [
                         "Look at the lights.",
                         "Now find a telephone and dial that number.",
@@ -1302,7 +1406,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "The attic? What attic?!",
-					"orderedList": false,
                     "answers": [
                         "If you haven't yet been to the second floor of the mansion, don't continue to develop answers in this section.",
                         "Didn't the ceiling panel in the upstairs hall ever strike you as funny?",
@@ -1312,7 +1415,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Hey, the trunk won't open! What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Don't fret. Type OPEN THE PANEL.",
                         "Now, opening the trunk should be a cinch."
@@ -1325,14 +1427,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "Is there a way to climb back up the beach stairs?",
-					"orderedList": false,
                     "answers": [
                         "No."
                     ]
                 },
                 {
                     "title": "What should I do with the small, smoldering fire?",
-					"orderedList": false,
                     "answers": [
                         "Putting it out might upset Morgan Fairchild.",
                         "She probably wouldn't mind if you use it to light matches and candles, though."
@@ -1340,7 +1440,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I'm swimming in the ocean. I'd like to swim underwater, but the undertow here is too strong for me. What to do?",
-					"orderedList": false,
                     "answers": [
                         "If you're not at the inlet, you're developing answers to the wrong question.",
                         "SWIM SOUTH into the cave. The undertow shouldn't be too bad there."
@@ -1348,7 +1447,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I keep running out of air when I'm swimming underwater. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "You should swim in the opposite direction of the current.",
                         "Enter the water at the Grotto and swim down, then down again. Next swim west, then up twice."
@@ -1356,7 +1454,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "What do I do with the squid?",
-					"orderedList": false,
                     "answers": [
                         "Fried Calamari is an excellent dish.",
                         "First kill the squid, then...",
@@ -1368,7 +1465,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Gee, it's awfully dark in this cave. Is there any way to get some light in here?",
-					"orderedList": false,
                     "answers": [
                         "Any Boy Scout could tell you how.",
                         "You'll need to use a match.",
@@ -1379,14 +1475,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I open the hatch in the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "PULL THE CHAIN."
                     ]
                 },
                 {
                     "title": "How do I get out of the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "The safe has potential. Potential energy, that is.",
                         "If the safe were to drop on one end of the plank...",
@@ -1397,7 +1491,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "How do I open the safe?",
-					"orderedList": false,
                     "answers": [
                         "If the safe is still suspended in the air, don't continue developing answers to this question. You'll have to figure out how to get the safe onto the ground first.",
                         "This is a combination safe, and the combination is right in front of you.",
@@ -1411,7 +1504,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Is there a way to return to the cliff from the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't already escaped the bomb shelter once, you're developing answers to the wrong question. See the question, \"How do I get out of the bomb shelter?\"",
                         "Did you notice that ladder lying on the cliff?",
@@ -1426,14 +1518,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "Prop vault? Have I missed something?",
-					"orderedList": false,
                     "answers": [
                         "Yes, you have. Develop the hints in this section only if you've been to the vault. If you haven't been here, just keep playing — you'll wind up here eventually."
                     ]
                 },
                 {
                     "title": "How do I deal with Cousin Herman?",
-					"orderedList": false,
                     "answers": [
                         "Why not do unto Herman as he does unto you?",
                         "There is a reason why Herman keeps picking up weapons and hitting you with them.",
@@ -1444,7 +1534,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Yow! Uncle Buddy doesn't look so good. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Call the make-up man?",
                         "No, Uncle Buddy hasn't aged too well. But after all he's been dead quite awhile.",
@@ -1453,7 +1542,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "Ack! How do I shut off the buzzsaw??",
-					"orderedList": false,
                     "answers": [
                         "You'll have to get Herman out of the way first.",
                         "Once you have, just TURN OFF THE SAW."
@@ -1466,7 +1554,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "What are these pieces of paper with lines on them?",
-					"orderedList": false,
                     "answers": [
                         "Each of the two pieces of paper is one half of something.",
                         "They're halves of a map, which depicts the hedge maze.",
@@ -1475,7 +1562,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 },
                 {
                     "title": "I found a note and a peg. Where do I go?",
-					"orderedList": false,
                     "answers": [
                         "\"Come on down.\"",
                         "The peg-hole to the left of the set of pegs might have tipped you off that there's another floor below the cellar.",
@@ -1491,7 +1577,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             "questions": [
                 {
                     "title": "Here are the names of the treasures and the locations in which they're found:",
-					"orderedList": false,
 					"columns": [
 						{"header": "Treasure", "width": "50%"},
 						{"header": "Location", "width": "50%"}
@@ -1516,7 +1601,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         {
             "questions": [
 				{
-					"orderedList": false,
 					"columns": [
 						{"header": "Event", "width": "70%"},
 						{"header": "Points", "width": "30%"}
@@ -1536,7 +1620,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         },
 		{	"questions": [
 				{
-					"orderedList": false,
 					"title": "Have you ever:",
 					"answers": [
 						"...rung the doorbell? (Try this several times.)",
