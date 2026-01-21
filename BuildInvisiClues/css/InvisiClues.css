@@ -40,7 +40,7 @@
 html {
 	box-sizing: border-box;
 	background-repeat: no-repeat;
-	scroll-behavior: smooth;
+	scroll-behavior: auto;
 		
 	font-family: var(--sans);
 	font-weight: var(--normal-weight);
@@ -179,8 +179,9 @@ div.toc {
 
 .header img {
 	float: left;
-	height: 290px;
 	margin-right: 2em;
+	max-width: 188px;
+	width: 30%;
 }
 
 .header::after {
@@ -324,7 +325,7 @@ div.answer-row:hover .answer-cell {
 	display: none;
 
 	background-color: #134F8F;
-	padding: 1em 0;
+	padding: 1em;
 }
 
 .topNav select {
