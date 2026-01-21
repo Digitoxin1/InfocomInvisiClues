@@ -400,14 +400,14 @@
         {
             "questions": [
                 {
-                    "title": "1. <span class=\"hidden-title\">When should I listen to Leslie's phone call?</span>",
+                    "title": "When should I listen to Leslie's phone call?",
                     "answers": [
                         "If you listen in on the extension, you will hear the same conversation",
                         "every time. There is no way to hear more of the conversation."
                     ]
                 },
                 {
-                    "title": "2. <span class=\"hidden-title\">What is in the envelope?</span>",
+                    "title": "What is in the envelope?",
                     "answers": [
                         "You won't find out without opening it, illegal and immoral though that may be.",
                         "It appears that Mrs. Robner had a motive for killing her husband.",
@@ -415,7 +415,7 @@
                     ]
                 },
                 {
-                    "title": "3. <span class=\"hidden-title\">What do I do with the notepad?</span>",
+                    "title": "What do I do with the notepad?",
                     "answers": [
                         "This is something you should examine carefully.",
                         "Is there a way you might make sense of the indentations?",
@@ -426,7 +426,7 @@
                     ]
                 },
                 {
-                    "title": "4. <span class=\"hidden-title\">What do the indentations on the notepad say?</span>",
+                    "title": "What do the indentations on the notepad say?",
                     "answers": [
                         "It is clearly a note from Marshall Robner to Mr. Baxter.",
                         "It seems to be a rather forceful note.",
@@ -439,7 +439,7 @@
                     ]
                 },
                 {
-                    "title": "5. <span class=\"hidden-title\">What is George up to?</span>",
+                    "title": "What is George up to?",
                     "answers": [
                         "Did you follow him?",
                         "Did you try to hide so you could watch?",
@@ -450,7 +450,7 @@
                     ]
                 },
                 {
-                    "title": "6. <span class=\"hidden-title\">How do I open the safe?</span>",
+                    "title": "How do I open the safe?",
                     "answers": [
                         "Have you asked anyone for the combination?",
                         "No one will admit to knowing it.",
@@ -462,7 +462,7 @@
                     ]
                 },
                 {
-                    "title": "7. <span class=\"hidden-title\">Who murdered Ms. Dunbar?</span>",
+                    "title": "Who murdered Ms. Dunbar?",
                     "answers": [
                         "Who had a motive?",
                         "Who has the pen that wrote the \"suicide\" note?",
@@ -471,7 +471,7 @@
                     ]
                 },
                 {
-                    "title": "8. <span class=\"hidden-title\">How did the murderer get to Ms. Dunbar?</span>",
+                    "title": "How did the murderer get to Ms. Dunbar?",
                     "answers": [
                         "You might try hiding in the hall closet to see where he comes from.",
                         "If you surprise him in the master bedroom or on the master bedroom balcony, you will be killed.",
@@ -480,27 +480,27 @@
                     ]
                 },
                 {
-                    "title": "9. <span class=\"hidden-title\">Is this the proper ending of the game?</span>",
+                    "title": "Is this the proper ending of the game?",
                     "answers": [
                         "Do you feel satisfied?",
                         "Don't you think you can solve the case without Dunbar being murdered?"
                     ]
                 },
                 {
-                    "title": "10. <span class=\"hidden-title\">Was it suicide?</span>",
+                    "title": "Was it suicide?",
                     "answers": [
                         "You must be kidding!",                        
                         "This answer left intentionally blank."
                     ]
                 },
                 {
-                    "title": "11. <span class=\"hidden-title\">What do I need to get a conviction?</span>",
+                    "title": "What do I need to get a conviction?",
                     "answers": [
                         "You need a good case. There must be a clear motive, means of administering the drug and removing the evidence, no alibi, and no inconsistencies."
                     ]
                 },
                 {
-                    "title": "12. <span class=\"hidden-title\">How can I prove that Mr. Baxter was involved?</span>",
+                    "title": "How can I prove that Mr. Baxter was involved?",
                     "answers": [
                         "You'll have to come up with a motive. Develop Hidden Question 19.",
                         "He has a good alibi for the night of the crime. You'll have to destroy it. Develop Hidden Question 20.",
@@ -508,7 +508,7 @@
                     ]
                 },
                 {
-                    "title": "13. <span class=\"hidden-title\">How can I prove George is guilty?</span>",
+                    "title": "How can I prove George is guilty?",
                     "answers": [
                         "You'll need a solid motive.",
                         "\"Love of money is the root of all evil.\"",
@@ -518,7 +518,7 @@
                     ]
                 },
                 {
-                    "title": "14. <span class=\"hidden-title\">How do I prove that Mrs. Robner is guilty?</span>",
+                    "title": "How do I prove that Mrs. Robner is guilty?",
                     "answers": [
                         "She certainly had a motive — Steven.",
                         "She also had a convenient balcony to reenter the house without Mrs. Rourke hearing her.",
@@ -528,7 +528,7 @@
                     ]
                 },
                 {
-                    "title": "15. <span class=\"hidden-title\">How do I convict Ms. Dunbar?</span>",
+                    "title": "How do I convict Ms. Dunbar?",
                     "answers": [
                         "What would her motive be?",
                         "She certainly had the opportunity to put her LoBlo in the tea.",
@@ -537,14 +537,14 @@
                     ]
                 },
                 {
-                    "title": "16. <span class=\"hidden-title\">What was McNabb's motive?</span>",
+                    "title": "What was McNabb's motive?",
                     "answers": [
                         "Is it possible that Mr. Robner stepped on a rosebush?",
                         "Be serious. McNabb is certainly not a suspect."
                     ]
                 },
                 {
-                    "title": "17. <span class=\"hidden-title\">How did Steven get the LoBlo capsules?</span>",
+                    "title": "How did Steven get the LoBlo capsules?",
                     "answers": [
                         "This is a red herring.",
                         "This space intentionally left blank.",
@@ -552,7 +552,7 @@
                     ]
                 },
                 {
-                    "title": "18. <span class=\"hidden-title\">What caused the bruise on Mr. Robner's left temple?</span>",
+                    "title": "What caused the bruise on Mr. Robner's left temple?",
                     "answers": [
                         "It is interesting that it was the left temple, since the body was lying on the right side on the floor.",
                         "It is possible that Mr. Robner hit his head on the desk as he fell.",
@@ -561,7 +561,7 @@
                     ]
                 },
                 {
-                    "title": "19. <span class=\"hidden-title\">How do I prove a motive for Mr. Baxter?</span>",
+                    "title": "How do I prove a motive for Mr. Baxter?",
                     "answers": [
                         "There is an item of interest in the library.",
                         "Check out the notepad.",
@@ -569,7 +569,7 @@
                     ]
                 },
                 {
-                    "title": "20. <span class=\"hidden-title\">How can Baxter's alibi be destroyed?</span>",
+                    "title": "How can Baxter's alibi be destroyed?",
                     "answers": [
                         "In his police interview, he said he was at the concert alone.",
                         "Before continuing, show Ms. Dunbar the lab report and follow up on the subsequent developments.",
@@ -577,7 +577,7 @@
                     ]
                 },
                 {
-                    "title": "21. <span class=\"hidden-title\">How did Baxter carry out the murder?</span>",
+                    "title": "How did Baxter carry out the murder?",
                     "answers": [
                         "How could he have gotten the LoBlo into Mr. Robner's tea?",
                         "He had to have an accomplice.",
@@ -585,14 +585,14 @@
                     ]
                 },
                 {
-                    "title": "22. <span class=\"hidden-title\">How did George carry out the murder?</span>",
+                    "title": "How did George carry out the murder?",
                     "answers": [
                         "How did he get the LoBlo into the tea?",
                         "How did he reenter the house without Mrs. Rourke hearing him (or is she lying)?"
                     ]
                 },
                 {
-                    "title": "23. <span class=\"hidden-title\">Why is this question here?</span>",
+                    "title": "Why is this question here?",
                     "answers": [
                         "If you thought there were no more questions,",
                         "you might be able to deduce",
@@ -605,7 +605,7 @@
                     ]
                 },
                 {
-                    "title": "24. <span class=\"hidden-title\">What do I do with the fragment?</span>",
+                    "title": "What do I do with the fragment?",
                     "answers": [
                         "Did you clean it off and examine it?",
                         "Do you recall anything similar?",
@@ -620,19 +620,19 @@
                     ]
                 },
                 {
-                    "title": "25. <span class=\"hidden-title\">What does the shoe size and depth indicate?</span>",
+                    "title": "What does the shoe size and depth indicate?",
                     "answers": [
                         "See the answer to Hidden Question 26."
                     ]
                 },
                 {
-                    "title": "26. <span class=\"hidden-title\">Who put the stolen Rembrandt in the attic?</span>",
+                    "title": "Who put the stolen Rembrandt in the attic?",
                     "answers": [
                         "See the answer to Hidden Question 25."
                     ]
                 },
                 {
-                    "title": "27. <span class=\"hidden-title\">Why is there both a living and a dead Ms. Dunbar?</span>",
+                    "title": "Why is there both a living and a dead Ms. Dunbar?",
                     "answers": [
                         "Do you remember Dunbar referring to her identical twin sister?",
                         "Wasn't Mrs. Robner an expert in makeup and impersonations during her early theatrical career?",
@@ -641,7 +641,7 @@
                     ]
                 },
                 {
-                    "title": "28. <span class=\"hidden-title\">Is the ticket stub meaningful?</span>",
+                    "title": "Is the ticket stub meaningful?",
                     "answers": [
                         "If you show Baxter the ticket stub, he admits that he was at the concert with Ms. Dunbar, but says that she became ill at intermission and took a cab home.",
                         "Dunbar originally said she was \"out with a friend and we didn't get back until 10:30.\"",
@@ -650,7 +650,7 @@
                     ]
                 },
                 {
-                    "title": "29. <span class=\"hidden-title\">Where is the ticket stub?</span>",
+                    "title": "Where is the ticket stub?",
                     "answers": [
                         "Ms. Dunbar has it.",
                         "Searching won't turn it up.",
@@ -659,7 +659,8 @@
                 }
             ],
             "title": "Hidden Questions",
-			"subTitle": "Develop the numbered questions only when you are directed to in other parts of this booklet."
+			"subTitle": "Develop the numbered questions only when you are directed to in other parts of this booklet.",
+			"hiddenTitles": true
         },
         {
             "questions": [
@@ -686,6 +687,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you ever tried:",
 					"answers": [
 						"having the ladder analyzed after noon? (Can you guess why this happens?)",

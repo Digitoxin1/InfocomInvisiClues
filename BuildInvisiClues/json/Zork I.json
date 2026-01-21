@@ -737,6 +737,8 @@
         {
             "questions": [
 				{
+					"orderedList": false,
+					"noPadding": true,
 					"title": "Progress Points",
 					"subTitle": "(Use only as a last resort.)",
 					"answers": [
@@ -745,12 +747,13 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Treasures: Their Values and Locations",
 					"subTitle": "(Use only as a last resort.)",
 					"columns": [
-						{"header": "treasure", "width": "40%"},
-						{"header": "value\n(touch)", "width": "15%"},
-						{"header": "value\n(case)", "width": "15%"},
+						{"header": "treasure", "width": "35%"},
+						{"header": "value\n(touch)", "width": "18%"},
+						{"header": "value\n(case)", "width": "17%"},
 						{"header": "where", "width": "30%"}
 					],
 					"answers": [
@@ -782,6 +785,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you ever:",
 					"answers": [
 						"...opened the grating from beneath while the leaves were still on it?",
@@ -800,6 +804,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Words you may not have tried:",
 					"answers": [
 						"HELLO (to Troll, Thief, Cyclops)",

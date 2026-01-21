@@ -1212,6 +1212,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"5 points for waking up from the opening dream",
 						"15 points for finding the key to Belboz's journal",
@@ -1246,6 +1247,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Spells", "width": "25%"},
 						{"header": "Locations", "width": "75%"}
@@ -1271,6 +1273,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Potions", "width": "25%"},
 						{"header": "Locations", "width": "75%"}
@@ -1291,6 +1294,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you tried:",
 					"answers": [
 						"typing WAKE ME during the opening dream?",
@@ -1329,6 +1333,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Things you can read about in the encyclopedia:",
 					"answers": [
 						"ACCARDI-BY-THE-SEA",

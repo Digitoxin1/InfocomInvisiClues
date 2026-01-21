@@ -854,6 +854,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "item of value", "width": "30%"},
 						{"header": "value", "width": "10%"},
@@ -877,6 +878,7 @@
 				{
 					"title": "Other Points<br>You receive 25 points for:",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...successfully reaching the Red Dock.",
 						"...entering the Drive Bubble.",
@@ -894,6 +896,7 @@
 				{
 					"title": "Have you ever...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...touched the Starcross controls after the course was set?",
 						"...taken the space suit off in space?",

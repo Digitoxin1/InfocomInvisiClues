@@ -1,5 +1,7 @@
 {
     "revision": 1.0,
+	"orderedList": false,
+	"noPadding": true,
 	"header": {
 		"title": "Stationfall",
 		"year": "1987",
@@ -29,7 +31,8 @@
 			"questions": [
 				{
 					"title": "At home, Jim NEVER has more than one helping of my purple goo! But last night at the Johnsons' party, he had three helpings of theirs! What's wrong with my purple goo?",
-					"orderedList": false,
+					"orderedList": false,					
+					"noPadding": true,
 					"answers": [
 						"Have you tried to TASTE MY PURPLE GOO and then to TASTE THE JOHNSONS' PURPLE GOO?",
 						"Now that you've determined that your purple goo tastes like old sweat socks, maybe you should EXAMINE MY PURPLE GOO COOKER.",
@@ -44,7 +47,6 @@
             "questions": [
                 {
                     "title": "How do I get past the door on the port side of Deck Twelve?",
-					"orderedList": false,
                     "answers": [
                         "You can only open the door by putting a validated Assignment Completion Form in the slot.",
                         "You can only get your Assignment Completion Form validated if you complete your mission.",
@@ -53,28 +55,24 @@
                 },
                 {
                     "title": "Where can I find a forklift to move the pallets of forms?",
-					"orderedList": false,
                     "answers": [
                         "Perhaps there's a forklift beyond the door at Deck Twelve. Or, perhaps there's one aboard the space station."
                     ]
                 },
                 {
                     "title": "How can I choose a robot?",
-					"orderedList": false,
                     "answers": [
                         "Simple. Put your Robot Use Authorization Form in the slot, then TYPE 1 or TYPE 2 or TYPE 3."
                     ]
                 },
                 {
                     "title": "Which robot should I choose?",
-					"orderedList": false,
                     "answers": [
                         "Floyd, of course!"
                     ]
                 },
                 {
                     "title": "How does the spacetruck operate?",
-					"orderedList": false,
                     "answers": [
                         "If you're having trouble getting into the truck, just OPEN THE HATCH then ENTER THE TRUCK.",
                         "All piloting is done automatically. Just put your Class Three Spacecraft Activation Form in the slot to activate the truck.",
@@ -84,14 +82,12 @@
                 },
                 {
                     "title": "How can I send a message on the SB radio?",
-					"orderedList": false,
                     "answers": [
                         "Since the microphone is missing, you can't."
                     ]
                 },
                 {
                     "title": "How can I get to the space station?",
-					"orderedList": false,
                     "answers": [
                         "By using the spacetruck, of course. See the question about how to operate the truck.",
                         "The course number is based on the current time (look at your chronometer, or simply look at the status line on the top of your screen). A chart of course numbers for each time slot can be found on the Assignment Completion Form in your <em>Stationfall</em> package.",
@@ -105,7 +101,6 @@
             "questions": [
                 {
                     "title": "How can I get the seven-pointed star?",
-					"orderedList": false,
                     "answers": [
                         "It's high above you, beyond your reach. You must get higher, somehow.",
                         "Don't go on until you've explored the village.",
@@ -125,7 +120,6 @@
                 },
                 {
                     "title": "How does the Food Processing and Dispensing Unit work?",
-					"orderedList": false,
                     "answers": [
                         "Have you turned it on?",
                         "I guess the answer to \"How does the FPU work?\" is \"It doesn't.\"",
@@ -134,7 +128,6 @@
                 },
                 {
                     "title": "How does the nanofilm reader work?",
-					"orderedList": false,
                     "answers": [
                         "Just put a spool in the reader, then turn the reader on.",
                         "There are three spools to be found: in the Chapel, the Printing Plant, and Docking Bay #3.",
@@ -143,7 +136,6 @@
                 },
                 {
                     "title": "What does the detonator do and how does it work?",
-					"orderedList": false,
                     "answers": [
                         "Examine it.",
                         "Open it.",
@@ -159,7 +151,6 @@
                 },
                 {
                     "title": "Is there any way to open the storage bin in the Dome?",
-					"orderedList": false,
                     "answers": [
                         "Have you read the commander's log?",
                         "The storage bin key is in the safe. See the question about opening it."
@@ -172,7 +163,6 @@
             "questions": [
                 {
                     "title": "How can I get things from the dispenser in the PX?",
-					"orderedList": false,
                     "answers": [
                         "First you need a coin. Where might you expect to find coins?",
                         "Don't go on until you explore the village.",
@@ -189,7 +179,6 @@
                 },
                 {
                     "title": "Are the lights in Station Control important?",
-					"orderedList": false,
                     "answers": [
                         "They can tell you which of the station's systems are malfunctioning. Green indicates a functioning system; yellow signifies a minor problem; red shows a system with a serious malfunction.",
                         "Monitor the lights as the chrons and days pass by. The situation seems to get worse and worse...",
@@ -199,7 +188,6 @@
                 },
                 {
                     "title": "Can I send a \"help\" message from the Comm Center?",
-					"orderedList": false,
                     "answers": [
                         "Push the red button.",
                         "I guess not."
@@ -207,7 +195,6 @@
                 },
                 {
                     "title": "How does the log reader work?",
-					"orderedList": false,
                     "answers": [
                         "Place a tape in it. Turn it on.",
                         "There's a log tape in the Commander's Quarters, right next door.",
@@ -217,7 +204,6 @@
                 },
                 {
                     "title": "How can I open the safe?",
-					"orderedList": false,
                     "answers": [
                         "You can't open the safe until you've solved a bunch of other puzzles first.",
                         "Have you been to the Trading Post.",
@@ -228,7 +214,6 @@
                 },
                 {
                     "title": "How can I get the drill bit out of the heating chamber?",
-					"orderedList": false,
                     "answers": [
                         "Try TAKE THE MEDIUM DRILL BIT.",
                         "\"...the opening is too small for a normal human hand...\"",
@@ -237,7 +222,6 @@
                 },
                 {
                     "title": "What should I do about Oliver?",
-					"orderedList": false,
                     "answers": [
                         "Oliver's presence seems to affect Floyd pretty deeply, but you can't do anything with Oliver until he \"wakes up.\"",
                         "So, ignore Oliver for now. Maybe he'll wake up before the end of <em>Stationfall</em>."
@@ -245,7 +229,6 @@
                 },
                 {
                     "title": "How do I get past the security doors (into the Brig and the Armory)?",
-					"orderedList": false,
                     "answers": [
                         "There's an ID reader next to each security door.",
                         "To use an ID reader, just PUT THE ID CARD INTO THE ID READER.",
@@ -257,7 +240,6 @@
                 },
                 {
                     "title": "Where's the forklift that belongs in the Shipping Room?",
-					"orderedList": false,
                     "answers": [
                         "You certainly won't be able to move the pallets to your spacetruck until you find it. Explore around.",
                         "It seems to be missing. Considering how malevolent all the machinery is acting, I'd be worried."
@@ -265,7 +247,6 @@
                 },
                 {
                     "title": "How can I decipher that message in the Alien Ship?",
-					"orderedList": false,
                     "answers": [
                         "There are clues all over the place!",
                         "A subtle clue comes from examining the alien skeleton.",
@@ -279,7 +260,6 @@
                 },
                 {
                     "title": "How does the drill work? Where should I use it?",
-					"orderedList": false,
                     "answers": [
                         "To drill a hole in, for example, the spacetruck, just type DRILL HOLE IN SPACETRUCK.",
                         "There are three different size bits scattered around the space station: the small drill bit that's in the drill when you find it, the medium drill bit in the heating chamber, and the large drill bit in the PX dispenser.",
@@ -293,7 +273,6 @@
                 },
                 {
                     "title": "How can I get past the closed iris hatch?",
-					"orderedList": false,
                     "answers": [
                         "You won't be able to get past the iris hatch until you've explored the Command Module pretty well.",
                         "There's a slot next to the hatch. By now, you should know that slots are for forms. Have you found any applicable form?",
@@ -315,7 +294,6 @@
             "questions": [
                 {
                     "title": "Is there anything important in Professor Schultz' notebook?",
-					"orderedList": false,
                     "answers": [
                         "It should help you figure out what's going on around here: why there's no one around, why all the machines are malfunctioning, etc.",
                         "There's also a clue for deciphering the dot-writing in the alien ship."
@@ -323,7 +301,6 @@
                 },
                 {
                     "title": "What is the meaning of the note in the Bio Office?",
-					"orderedList": false,
                     "answers": [
                         "It's another clue about what happened aboard the station before you arrived, and what's continuing to happen.",
                         "If there's any word in the note you don't know, look it up!",
@@ -334,7 +311,6 @@
                 },
                 {
                     "title": "How can I get past the mutants?",
-					"orderedList": false,
                     "answers": [
                         "Though dangerous, the mutants are obviously calmed by one thing.",
                         "Have you ever turned on the large box with the pipes and pedals?",
@@ -345,7 +321,6 @@
                 },
                 {
                     "title": "Is the holding tank important?",
-					"orderedList": false,
                     "answers": [
                         "Have you read the commander's log?",
                         "The alien pyramid was moved to the holding tank, but at some point it has escaped, or been rescued, by violent means. Hmmm. Where could it be now?"
@@ -353,7 +328,6 @@
                 },
                 {
                     "title": "Is the twenty-prong fromitz board useful?",
-					"orderedList": false,
                     "answers": [
                         "If it is, you'll find out then."
                     ]
@@ -365,14 +339,12 @@
             "questions": [
                 {
                     "title": "How can I get into the village?",
-					"orderedList": false,
                     "answers": [
                         "See the question in the previous section about opening the iris hatch."
                     ]
                 },
                 {
                     "title": "What does it mean when the crystal ball glows?",
-					"orderedList": false,
                     "answers": [
                         "It means that Auntie Em is in trouble.",
                         "The crystal ball never glows. Remember the warning in the introduction: if you look at the answers to questions you don't understand, you'll probably end up learning things which will ruin the game for you."
@@ -380,7 +352,6 @@
                 },
                 {
                     "title": "Is the Arcturian balloon creature useful?",
-					"orderedList": false,
                     "answers": [
                         "Learn everything you can about it: read the sign, open the cage, do things with it...",
                         "There's a spray can in the Pawn Shop. Have you read the label?",
@@ -394,7 +365,6 @@
                 },
                 {
                     "title": "Is the textbook in the Mayor's office important?",
-					"orderedList": false,
                     "answers": [
                         "Read it!",
                         "Read the piece of paper! It's very useful.",
@@ -405,7 +375,6 @@
                 },
                 {
                     "title": "How does the platinum detector work?",
-					"orderedList": false,
                     "answers": [
                         "For one thing, it must be turned on.",
                         "Now just carry it around with you. It will beep if you ever enter a room where platinum is present. (After a while, the detector will malfunction and become too hot to hold. Simply turn it off and it will quickly cool.)",
@@ -415,7 +384,6 @@
                 },
                 {
                     "title": "What's a bedistor? Is it useful?",
-					"orderedList": false,
                     "answers": [
                         "Considering the bedistor's unit of measurement, it must be a component is some kind of electrical system.",
                         "If it's useful, you'll find out when you get to that section of the story."
@@ -423,7 +391,6 @@
                 },
                 {
                     "title": "What's this innocuous machine in Shady Dan's?",
-					"orderedList": false,
                     "answers": [
                         "Have you read the commander's log?",
                         "This is the ID-fixing machine he alludes to.",
@@ -433,7 +400,6 @@
                 },
                 {
                     "title": "How can I open the strong box?",
-					"orderedList": false,
                     "answers": [
                         "You won't find the key anywhere.",
                         "This job calls for brute force.",
@@ -444,7 +410,6 @@
                 },
                 {
                     "title": "Are the dice or the roulette wheel useful?",
-					"orderedList": false,
                     "answers": [
                         "The dice aren't any use at all.",
                         "But the roulette wheel is.",
@@ -454,7 +419,6 @@
                 },
                 {
                     "title": "Is the ostrich of any use?",
-					"orderedList": false,
                     "answers": [
                         "Definitely!",
                         "Read the letter that's also in Doc Schuster's.",
@@ -467,7 +431,6 @@
                 },
                 {
                     "title": "How can I get past the airlock?",
-					"orderedList": false,
                     "answers": [
                         "To use the airlock, simply open the inner door, open the airlock, close the inner door, then open the outer door.",
                         "Of course, if you're not wearing a space suit when you open the outer door, you'll die from the vacuum.",
@@ -481,7 +444,6 @@
                 },
                 {
                     "title": "Why is the explosive melting?",
-					"orderedList": false,
                     "answers": [
                         "Read the instruction sheet from the Trading Post.",
                         "FREZONE must be kept very cold. That's why it's stored out in the vacuum of space. It melts quickly when exposed to balmy, room temperature air.",
@@ -492,7 +454,6 @@
                 },
                 {
                     "title": "How does the explosive work? Where should I use it?",
-					"orderedList": false,
                     "answers": [
                         "Examine the explosive and read the instruction sheet from the Trading Post.",
                         "You'll need a timer and a detonator.",
@@ -511,7 +472,6 @@
             "questions": [
                 {
                     "title": "How do I get to Levels Eight and Nine?",
-					"orderedList": false,
                     "answers": [
                         "I suppose you've tried the elevator as well as the ladder leading down from Level Seven.",
                         "Since the normal methods don't work, don't worry about it for now. Hopefully, something will open up. Meanwhile, work on other goals.",
@@ -524,7 +484,6 @@
                 },
                 {
                     "title": "What is that emu doing in the water tanks?",
-					"orderedList": false,
                     "answers": [
                         "The backstroke?",
                         "If you were an emu aboard a space station, where would you go for a bath?",
@@ -533,14 +492,12 @@
                 },
                 {
                     "title": "How can I open the grating at the bottom of the air shaft?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried OPEN THE GRATING?"
                     ]
                 },
                 {
                     "title": "How can I get past the marauding exercise machine?",
-					"orderedList": false,
                     "answers": [
                         "You've been to the Gym, haven't you?",
                         "Read the sign in the gym.",
@@ -553,7 +510,6 @@
                 },
                 {
                     "title": "How can I survive the charging forklift?",
-					"orderedList": false,
                     "answers": [
                         "Take away its credit cards? Seriously, this one's easier than you think.",
                         "Do a LOOK and read the description carefully.",
@@ -564,7 +520,6 @@
                 },
                 {
                     "title": "How can I avoid the crazed washing machine?",
-					"orderedList": false,
                     "answers": [
                         "I'd take my business to a different laundromat.",
                         "The missing washing machine from the Laundry was probably disassembled for parts to make more alien pyramids.",
@@ -573,7 +528,6 @@
                 },
                 {
                     "title": "What should I do in the Factory?",
-					"orderedList": false,
                     "answers": [
                         "I hate to belabor the point, but any moment now, a godzillion alien pyramids will be launched from the Factory. Within a few days, each will find a host ship or station, and create a godzillion more alien pyramids. By the end of the month, humanity will be interstellar DUST! To make matters worse, you've got about three winks of an eye left to live.",
                         "You must destroy that pyramid! But Floyd won't let you get to the pedestal.",
@@ -595,7 +549,6 @@
             "questions": [
                 {
                     "title": "How can I refuel my spacetruck?",
-					"orderedList": false,
                     "answers": [
                         "It's not surprising that you don't know. That sort of menial task is usually done by some grunt, like an Ensign Ninth Class from the Refueling Division. But explore the space station; you might learn something.",
                         "Have you read the commander's log? Have you been to the Dome? Have you found a lilac nanofilm spool? Have you read that spool?",
@@ -609,7 +562,6 @@
                 },
                 {
                     "title": "What should I do when the alien ship docks with my spacetruck in mid-trip?",
-					"orderedList": false,
                     "answers": [
                         "The alien ship is armed.",
                         "Your spacetruck is unarmed.",
@@ -618,7 +570,6 @@
                 },
                 {
                     "title": "Should I continue toward the Duffy once the aliens have boarded the truck?",
-					"orderedList": false,
                     "answers": [
                         "The aliens don't know how to program the autopilot; only you do.",
                         "But the aliens have ray guns; you don't.",
@@ -627,7 +578,6 @@
                 },
                 {
                     "title": "What does Captain Fussbottom want from me?",
-					"orderedList": false,
                     "answers": [
                         "He wants to know how to stop the aliens from taking over the Duffy. Especially since they keep mumbling, \"Today the Duffy, tomorrow the Galaxy!\"",
                         "You must have seen or heard SOMETHING aboard the spacetruck that demonstrates some weakness on the part of the aliens.",
@@ -637,7 +587,6 @@
                 },
                 {
                     "title": "How can I stop the aliens from vivisecting Captain Fussbottom?",
-					"orderedList": false,
                     "answers": [
                         "You won't be able to stop them until you have the proper, very powerful, quite deadly weapon.",
                         "Don't go on until you've been to the Navigation Deck.",
@@ -654,7 +603,6 @@
             "questions": [
                 {
                     "title": "What is my goal in <em>Stationfall</em>?",
-					"orderedList": false,
                     "answers": [
                         "Read the Assignment Completion Form in your <em>Stationfall</em> package!",
                         "For now, that's your goal.",
@@ -669,7 +617,6 @@
                 },
                 {
                     "title": "I've reached the space station. Where is everybody?",
-					"orderedList": false,
                     "answers": [
                         "Explore around! There are clues.",
                         "The cup of coffee is still hot when you arrive. Whatever happened must have happened recently.",
@@ -679,7 +626,6 @@
                 },
                 {
                     "title": "Explain to me how the elevator in the Command Module works.",
-					"orderedList": false,
                     "answers": [
                         "To summon the elevator, just PRESS THE BUTTON next to the elevator shaft entrance. When the elevator arrives, ENTER THE ELEVATOR. Then TYPE 3, or whatever number level you want to go to.",
                         "The elevator will not go to Level Eight or Level Nine. It's up to you to figure out why.",
@@ -689,7 +635,6 @@
                 },
                 {
                     "title": "What can I do about those kripping (pardon the language) hull welders?",
-					"orderedList": false,
                     "answers": [
                         "They won't follow you if you leave the room before they reach you.",
                         "Once you've found the zapgun, you can shoot them. There are four hull welders; once you've shot them all, they won't bother you anymore!"
@@ -697,7 +642,6 @@
                 },
                 {
                     "title": "Is there a light source anywhere?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "In the village.",
@@ -706,7 +650,6 @@
                 },
                 {
                     "title": "Where can I find food?",
-					"orderedList": false,
                     "answers": [
                         "There's a survival kit in the spacetruck. It contains two blobs of goo and some blue soup.",
                         "There's more food in the village.",
@@ -717,21 +660,18 @@
                 },
                 {
                     "title": "Where is it safe to sleep?",
-					"orderedList": false,
                     "answers": [
                         "It's safe to sleep anywhere there's a bed: the various barracks and officer's quarters, the Sick Bay, the Flophouse..."
                     ]
                 },
                 {
                     "title": "How many different dreams are there?",
-					"orderedList": false,
                     "answers": [
                         "Six."
                     ]
                 },
                 {
                     "title": "Why is my ID card scrambled?",
-					"orderedList": false,
                     "answers": [
                         "The information on the ID card is magnetically stored.",
                         "It was scrambled by the magnetic boots. You can't carry the boots and the card at the same time without munging the card."
@@ -739,7 +679,6 @@
                 },
                 {
                     "title": "Help! Plato keeps killing me!",
-					"orderedList": false,
                     "answers": [
                         "Yes, but at least he's giving you a lot of interesting information!",
                         "There is a way to stop him, even though you're paralyzed.",
@@ -750,7 +689,6 @@
                 },
                 {
                     "title": "Help! Oliver keeps killing me!",
-					"orderedList": false,
                     "answers": [
                         "Who would have thought that a sleeping, baby robot could be so deadly?",
                         "Who would have thought that the Mets would become World Champions in 1969?",
@@ -760,7 +698,6 @@
                 },
                 {
                     "title": "Good golly gosh! The whole space station blows up early on Day 4.",
-					"orderedList": false,
                     "answers": [
                         "Do you know why?",
                         "There's no way to prevent this. You'll have to stop the pyramid from launching its replicas before then."
@@ -772,7 +709,6 @@
         {
             "questions": [
 				{
-					"orderedList": false,
 					"columns": [
 						{"header": "Points", "width": "20%"},
 						{"header": "Action", "width": "80%"}
@@ -807,7 +743,6 @@
 			"questions": [
 				{
 					"title": "Have you tried...",
-					"orderedList": false,
 					"answers": [
 						"...reading the pallets of boxes in the Forms Storage Room? Opened a box?",
 						"...to destroy the forms in the Forms Storage Room (or the Shipping Room)?",

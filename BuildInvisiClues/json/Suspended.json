@@ -627,6 +627,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...having Poet describe everyone?",
 						"...having Whiz ask about Gregory Franklin?",

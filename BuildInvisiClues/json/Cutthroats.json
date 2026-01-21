@@ -1,5 +1,6 @@
 {
 	"revision": 1.0,
+	"uppercaseHeaders": true,
 	"header": {
 		"title": "Cutthroats",
 		"year": "1984",
@@ -991,6 +992,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columnHeaders": false,
 					"columns": [
 						{"width": "85%"},
@@ -1011,6 +1013,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "The Fianna:",
 					"columnHeaders": false,
 					"columns": [
@@ -1023,6 +1026,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "The Leviathan:",
 					"columnHeaders": false,
 					"columns": [
@@ -1036,6 +1040,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "The Intransigent:",
 					"columnHeaders": false,
 					"columns": [
@@ -1051,6 +1056,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "The Sao Vera:",
 					"columnHeaders": false,
 					"columns": [
@@ -1066,6 +1072,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columnHeaders": false,
 					"columns": [
 						{"width": "85%"},
@@ -1083,6 +1090,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you tried:",
 					"answers": [
 						"Getting drunk?",

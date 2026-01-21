@@ -937,6 +937,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"casting the KULCAD spell on everything remotely magical?",
 						"casting the GUNCHO spell on everything that moves?",
@@ -960,6 +961,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"20 points for opening the iron gate",
 						"20 points for making light",
@@ -989,6 +991,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Spells", "width": "20%"},
 						{"header": "Locations", "width": "80%"}

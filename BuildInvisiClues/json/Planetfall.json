@@ -933,6 +933,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"3 points for entering the Escape Pod.",
 						"3 points for entering the Crag.",
@@ -969,6 +970,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...reading the graffiti in the Brig?",
 						"...attacking, talking to, or throwing something at Blather?",

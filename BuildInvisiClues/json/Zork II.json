@@ -780,6 +780,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "treasure", "width": "35%"},
 						{"header": "value", "width": "20%"},
@@ -807,6 +808,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Other Points",
 					"answers": [
 						"Other points are gained by:<br>...solving the riddle (5)<br>...getting to the top of the well (10)<br>...killing the dragon (5)<br>...entering the Wizard's Workshop (10)<br>...solving the Oddly Angled Room maze (5)<br>...entering Cerberus' room (10)<br>...entering the Crypt anteroom (3)<br>...entering the Crypt (2)<br>...giving treasures to the demon (2 each, maximum 20)."
@@ -823,6 +825,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you ever tried...",
 					"answers": [
 						"...setting off the bomb in the Dusty Room and then waiting in the balloon tied to the ledge?",

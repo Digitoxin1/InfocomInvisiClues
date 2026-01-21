@@ -1,5 +1,7 @@
 {
     "revision": 1.0,
+	"orderedList": false,
+	"noPadding": true,
 	"header": {
 		"title": "The Lurking Horror",
 		"year": "1987",
@@ -29,7 +31,6 @@
 			"questions": [
 				{
 					"title": "At home, Jim NEVER has more than one helping of my purple goo! But last night at the Johnsons' party, he had three helpings of theirs! What's wrong with my purple goo?",
-					"orderedList": false,
 					"answers": [
 						"Have you tried to TASTE MY PURPLE GOO and then to TASTE THE JOHNSONS' PURPLE GOO?",
 						"Now that you've determined that your purple goo tastes like old sweat socks, maybe you should EXAMINE MY PURPLE GOO COOKER.",
@@ -44,7 +45,6 @@
             "questions": [
                 {
                     "title": "What am I supposed to do?",
-					"orderedList": false,
                     "answers": [
                         "You're supposed to complete your assignment.",
                         "This is a high-tech university! Your partially completed paper should be accessible from your local pc."
@@ -52,7 +52,6 @@
                 },
                 {
                     "title": "How do I use the pc?",
-					"orderedList": false,
                     "answers": [
                         "First, you need to turn it on.",
                         "Use the student ID number found in your game materials.",
@@ -63,7 +62,6 @@
                 },
                 {
                     "title": "I'm logged in, now what?",
-					"orderedList": false,
                     "answers": [
                         "Use the mouse to select the appropriate options.",
                         "Try clicking the correct menu box for the editor and then for your paper."
@@ -71,7 +69,6 @@
                 },
                 {
                     "title": "That paper doesn't look familiar!",
-					"orderedList": false,
                     "answers": [
                         "Indeed, it isn't. You might wonder what happened to it.",
                         "It certainly seems ruined at the beginning. Maybe later pages are okay, though.",
@@ -80,7 +77,6 @@
                 },
                 {
                     "title": "Now where am I? It doesn't look like G.U.E. Tech to me!",
-					"orderedList": false,
                     "answers": [
                         "Probably just a bad dream. Wait it out.",
                         "You can speed things up by going along with the crowd.",
@@ -89,7 +85,6 @@
                 },
                 {
                     "title": "I can't seem to get away from this place. I want to go home!",
-					"orderedList": false,
                     "answers": [
                         "There are many unusual things here.",
                         "Wouldn't you like a souvenir of this trip?",
@@ -100,7 +95,6 @@
                 },
                 {
                     "title": "I'm home, but where's my paper?",
-					"orderedList": false,
                     "answers": [
                         "The hacker seems willing to check out your problem.",
                         "Wait for him to finish looking at the situation.",
@@ -111,7 +105,6 @@
                 },
                 {
                     "title": "The hacker isn't very friendly, is he?",
-					"orderedList": false,
                     "answers": [
                         "Why should he be friendly?",
                         "All you've done so far is give him trouble.",
@@ -131,7 +124,6 @@
                 },
                 {
                     "title": "What can the hacker help me with?",
-					"orderedList": false,
                     "answers": [
                         "He's a proficient hacker.",
                         "He could probably write a program to write your term paper.",
@@ -146,7 +138,6 @@
                 },
                 {
                     "title": "I'm on the roof of the Computer Center, but there's nothing of interest here, is there?",
-					"orderedList": false,
                     "answers": [
                         "That's right. It's just a boring place.",
                         "You can enjoy the weather, until you freeze to death. But that's all."
@@ -159,7 +150,6 @@
             "questions": [
                 {
                     "title": "I've never seen so much junk!",
-					"orderedList": false,
                     "answers": [
                         "You could try moving it.",
                         "There sure is a lot of it, and it's heavy, too",
@@ -168,7 +158,6 @@
                 },
                 {
                     "title": "Where did you see that forklift?",
-					"orderedList": false,
                     "answers": [
                         "Turn on the forklift, and drive it east to the storage room.",
                         "Use the forklift to move the junk.",
@@ -177,7 +166,6 @@
                 },
                 {
                     "title": "How do I open the manhole cover?",
-					"orderedList": false,
                     "answers": [
                         "It sure is heavy.",
                         "Ever had a jar lid that wouldn't open?",
@@ -190,7 +178,6 @@
                 },
                 {
                     "title": "I can't open the trapdoor.",
-					"orderedList": false,
                     "answers": [
                         "It's stuck on the other side.",
                         "So great, where's the other side?",
@@ -205,7 +192,6 @@
             "questions": [
                 {
                     "title": "How do I unlock the padlock?",
-					"orderedList": false,
                     "answers": [
                         "You need a key.",
                         "Not just any key, a really good key.",
@@ -215,7 +201,6 @@
                 },
                 {
                     "title": "I don't like rats! They don't like me!",
-					"orderedList": false,
                     "answers": [
                         "For temporary relief, leave by the way you came, then gather your wits.",
                         "For a permanent solution, kill or scare them off.",
@@ -228,7 +213,6 @@
                 },
                 {
                     "title": "The steam valve is rusty!",
-					"orderedList": false,
                     "answers": [
                         "You need more strength to open the rusty valve.",
                         "Leverage is an elementary principle of physics...",
@@ -238,7 +222,6 @@
                 },
                 {
                     "title": "Why won't the urchins let me by?",
-					"orderedList": false,
                     "answers": [
                         "It's as though they're controlled through the wires attached to them.",
                         "Maybe if they weren't attached, they'd be nicer to you.",
@@ -255,7 +238,6 @@
             "questions": [
                 {
                     "title": "How do I get to the east end of the Infinite Corridor?",
-					"orderedList": false,
                     "answers": [
                         "Try waiting out the maintenance man. Eventually he'll move east.",
                         "Unfortunately, once he reaches the far end of the Infinite Corridor, he still won't let you past.",
@@ -269,7 +251,6 @@
                 },
                 {
                     "title": "How do I get the axe?",
-					"orderedList": false,
                     "answers": [
                         "READ THE SIGN.",
                         "Break the glass.",
@@ -278,7 +259,6 @@
                 },
                 {
                     "title": "I've stopped the waxer. Now what?",
-					"orderedList": false,
                     "answers": [
                         "Just stop the maintenance man.",
                         "This is a slippery problem to solve.",
@@ -290,7 +270,6 @@
                 },
                 {
                     "title": "How do I climb the rope at the Great Dome?",
-					"orderedList": false,
                     "answers": [
                         "You need something to protect your hands when you climb the rope.",
                         "WEAR THE GLOVES THEN CLIMB THE ROPE."
@@ -298,7 +277,6 @@
                 },
                 {
                     "title": "How can I get out of the dome?",
-					"orderedList": false,
                     "answers": [
                         "Still at the top rung?",
                         "Try lowering the ladder."
@@ -306,7 +284,6 @@
                 },
                 {
                     "title": "I'm on the Great Dome, but there's nothing of interest here, is there?",
-					"orderedList": false,
                     "answers": [
                         "Did you notice the plug?",
                         "Lift the plug then take the note."
@@ -319,7 +296,6 @@
             "questions": [
                 {
                     "title": "How do I unlock the door on top of the Brown Building?",
-					"orderedList": false,
                     "answers": [
                         "There sure are a lot of locked doors around here.",
                         "Sure would be nice if there was a key that opened them all.",
@@ -330,7 +306,6 @@
                 },
                 {
                     "title": "I can't get out of the weather station!",
-					"orderedList": false,
                     "answers": [
                         "Just get rid of the flying creature.",
                         "Why does it seem to have come after you? Can't just be a coincidence, can it?",
@@ -343,7 +318,6 @@
                 },
                 {
                     "title": "How do I get into the Dept. of Alchemy?",
-					"orderedList": false,
                     "answers": [
                         "The light is on inside, maybe someone's in there.",
                         "KNOCK ON THE DOOR."
@@ -351,7 +325,6 @@
                 },
                 {
                     "title": "I've gotten to the Alchemy Department. Now what?",
-					"orderedList": false,
                     "answers": [
                         "Maybe the professor can help you.",
                         "Maybe he doesn't want to help you.",
@@ -360,7 +333,6 @@
                 },
                 {
                     "title": "How do I get into the laboratory?",
-					"orderedList": false,
                     "answers": [
                         "The professor doesn't find you very interesting, does he?",
                         "Have you got anything that might pique his interest?",
@@ -375,7 +347,6 @@
                 },
                 {
                     "title": "Where can I find a note?",
-					"orderedList": false,
                     "answers": [
                         "Where you might once have seen a cow.",
                         "...or a Volkswagen Beetle.",
@@ -387,7 +358,6 @@
                 },
                 {
                     "title": "How do I get out of the laboratory?",
-					"orderedList": false,
                     "answers": [
                         "Consider carefully how the professor put you into the pentagram.",
                         "Did he use any equipment?",
@@ -409,7 +379,6 @@
                 },
                 {
                     "title": "What use is the vat?",
-					"orderedList": false,
                     "answers": [
                         "READ THE LABEL.",
                         "Great joke. What does it really do?",
@@ -419,7 +388,6 @@
                 },
                 {
                     "title": "How do I get the computer in the lab to boot up?",
-					"orderedList": false,
                     "answers": [
                         "Just put the disk in.",
                         "Find the disk first, of course.",
@@ -428,7 +396,6 @@
                 },
                 {
                     "title": "How can I decode the professor's diary file?",
-					"orderedList": false,
                     "answers": [
                         "Use the cryptography program.",
                         "It's accessible from the file server.",
@@ -443,7 +410,6 @@
             "questions": [
                 {
                     "title": "Not a maze! All these Wet Tunnels!",
-					"orderedList": false,
                     "answers": [
                         "You can use standard maze mapping techniques here, if you're patient.",
                         "Isn't there a better way?",
@@ -456,7 +422,6 @@
                 },
                 {
                     "title": "What's behind the curtain?",
-					"orderedList": false,
                     "answers": [
                         "Can you think of anything that might make slime less slimy?",
                         "Ever remove bubble gum from something it was stuck all over?",
@@ -469,7 +434,6 @@
                 },
                 {
                     "title": "I can't get anything large into the Tomb.",
-					"orderedList": false,
                     "answers": [
                         "There's more than one way to skin a cat.",
                         "Hmm, maybe there's another entrance to the steam tunnels.",
@@ -488,7 +452,6 @@
                 },
                 {
                     "title": "How do I remove a brick wall?",
-					"orderedList": false,
                     "answers": [
                         "Try destroying it with something heavy.",
                         "Well at least you can pry some bricks out to expose a reinforcing rod.",
@@ -502,7 +465,6 @@
                 },
                 {
                     "title": "How can I save the hacker?",
-					"orderedList": false,
                     "answers": [
                         "You can't. He's too stubborn to listen.",
                         "At least, he's going to attack that mass no matter what.",
@@ -512,7 +474,6 @@
                 },
                 {
                     "title": "How can I restore the integrity of G.U.E. Tech's computer system?",
-					"orderedList": false,
                     "answers": [
                         "Get rid of the mass.",
                         "How's it connected to the system?",
@@ -524,7 +485,6 @@
                 },
                 {
                     "title": "How do I keep from being engulfed?",
-					"orderedList": false,
                     "answers": [
                         "You'll have to destroy the mass before the hacker gets you.",
                         "Hurry.",
@@ -534,7 +494,6 @@
                 },
                 {
                     "title": "How do I get rid of the mass?",
-					"orderedList": false,
                     "answers": [
                         "You should have brought the reanimated hand along with you into the lair.",
                         "Well, it's not bobbing for apples.",
@@ -550,7 +509,6 @@
                 },
                 {
                     "title": "How do I keep from being fried?",
-					"orderedList": false,
                     "answers": [
                         "The water is electrified, so you will be too.",
                         "Insulation might be useful.",
@@ -561,7 +519,6 @@
                 },
                 {
                     "title": "How do I get rid of the dark being?",
-					"orderedList": false,
                     "answers": [
                         "The stone was useful before, and it would be useful now.",
                         "Wait until the stone is hot. Then throw the stone at the being."
@@ -569,7 +526,6 @@
                 },
                 {
                     "title": "How do I get out of the lair?",
-					"orderedList": false,
                     "answers": [
                         "You can't get out until after you've defeated the monsters.",
                         "After you've won, it's time to pick up your stone and go home."
@@ -577,7 +533,6 @@
                 },
                 {
                     "title": "What happened to my term paper?",
-					"orderedList": false,
                     "answers": [
                         "The mass that was hooked into the network had it.",
                         "You destroyed your paper when you destroyed the mass.",
@@ -592,7 +547,6 @@
             "questions": [
                 {
                     "title": "How can I survive outside?",
-					"orderedList": false,
                     "answers": [
                         "Wear your parka.",
                         "What parka?",
@@ -604,7 +558,6 @@
                 },
                 {
                     "title": "Where do I find a light source?",
-					"orderedList": false,
                     "answers": [
                         "Search the elevator.",
                         "There's a flashlight in the access panel."
@@ -612,7 +565,6 @@
                 },
                 {
                     "title": "How do I get into my dorm room?",
-					"orderedList": false,
                     "answers": [
                         "Go west.",
                         "Keep warm (stay bundled up).",
@@ -623,7 +575,6 @@
                 },
                 {
                     "title": "How do I prevent myself from falling asleep?",
-					"orderedList": false,
                     "answers": [
                         "What do people usually drink to stay awake?",
                         "No, there's no coffee.",
@@ -634,7 +585,6 @@
                 },
                 {
                     "title": "What's the urchin stolen and how do I get it?",
-					"orderedList": false,
                     "answers": [
                         "He's light-fingered and will rip off anything small that you leave lying around.",
                         "You need to induce the urchin to drop what he has.",
@@ -654,7 +604,6 @@
             "questions": [
 				{
 					"title": "... the hacker about.",
-					"orderedList": false,
 					"answers": [
 						"Himself",
 						"Keyring",
@@ -669,7 +618,6 @@
 				},
 				{
 					"title": "... the urchin about.",
-					"orderedList": false,
 					"answers": [
 						"Himself",
 						"Missing students",
@@ -678,7 +626,6 @@
 				},
 				{
 					"title": "... the professor about.",
-					"orderedList": false,
 					"answers": [
 						"Term paper",
 						"Sign-up sheet",
@@ -696,7 +643,6 @@
 			"questions": [
 				{
 					"title": "5 points are scored for each of the following 20 actions, resulting in a total of 100.",
-					"orderedList": false,
 					"answers": [
 						"Getting the stone.",
 						"Getting the master key from the hacker.",
@@ -727,7 +673,6 @@
 			"questions": [
 				{
 					"title": "Have you tried...",
-					"orderedList": false,
 					"answers": [
 						"...taking the pc out of the terminal room?",
 						"...pushing the help key or asking the hacker for help at various times?",

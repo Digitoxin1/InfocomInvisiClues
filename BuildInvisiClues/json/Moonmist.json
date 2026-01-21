@@ -1,5 +1,6 @@
 {
     "revision": 1.0,
+	"offsetAnswers": true,
 	"header": {
 		"title": "Moonmist",
 		"year": "1986",
@@ -225,6 +226,7 @@
                 },
 				{
                     "title": "I think I know who the ghost is. How do I prove it?",
+					"singleBulletPoints": true,
                     "answers": [
                         "Whoever the ghost is probably has a costume hidden. Or sometimes you can catch the ghost while it's haunting. If you still can't find the ghost costume, then read one of the next four answers (for example, read the BLUE answer if you're playing the blue variation)."
                     ]
@@ -600,6 +602,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Secret Entrance", "width": "35%"},
 						{"header": "How to Open It", "width": "65%"}
@@ -624,6 +627,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...read the magazine in the lumber room? (especially in the blue variation)",
 						"...kiss Iris if you are playing as a man, or kiss Jack or Ian if you are playing as a woman?",
@@ -645,15 +649,9 @@
 			"tocTitle": "Have You Tried To"
 		},
 		{
-			"questions": [
-				{
-					"customLabels": true,
-					"alwaysShow": true,
-					"answers": [
-						["", "The authors thank the Moonmist testers at lnfocom: Tomas Bok, Gary Brennan, Amy Briggs, Max Buxton, Liz Cyr-Jones, Suzanne Frank, and Matt Hillman. Numerous \"outside\" testers also gave us their valuable input.<br>Thanks to Carl Genatossio and Elizabeth Langosy for their excellent work on the package design and the package contents, including the tourist brochure and the \"Legendary Ghosts of Cornwall\" book."]
-					]
-				}
-			],
+			"paragraphs": [
+				"The authors thank the Moonmist testers at lnfocom: Tomas Bok, Gary Brennan, Amy Briggs, Max Buxton, Liz Cyr-Jones, Suzanne Frank, and Matt Hillman. Numerous \"outside\" testers also gave us their valuable input.<br>Thanks to Carl Genatossio and Elizabeth Langosy for their excellent work on the package design and the package contents, including the tourist brochure and the \"Legendary Ghosts of Cornwall\" book."
+			],			
 			"title": "Thanks!"
 		}
     ]

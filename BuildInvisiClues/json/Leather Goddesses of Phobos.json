@@ -1,5 +1,7 @@
 {
     "revision": 1.0,
+	"offsetAnswers": true,
+	"singleBulletPoints": true,
 	"header": {
 		"title": "Leather Goddesses of Phobos",
 		"year": "1986",
@@ -863,6 +865,7 @@
             "questions": [
                 {
                     "numberedList": true,
+					"noPadding": true,
 					"anyAnswer": true,
 					"columns": [
 						{"header": "Item", "width": "45%"},
@@ -887,6 +890,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Event", "width": "65%"},
 						{"header": "Points", "width": "35%"}
@@ -921,6 +925,7 @@
 				{
 					"title": "Have you ever tried to...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"...play <em>Leather Goddesses of Phobos</em> as a man if you're a woman, or vice versa?",
 						"...buy a beer in the bar before relieving yourself?",

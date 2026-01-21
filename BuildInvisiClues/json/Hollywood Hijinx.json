@@ -1,5 +1,7 @@
 {
 	"revision": 1.0,
+	"orderedList": false,
+	"noPadding": true,
 	"header": {
 		"title": "Hollywood Hijinx",
 		"year": "1987",
@@ -29,7 +31,6 @@
 			"questions": [
 				{
 					"title": "Why is the bureaucrat crying?",
-					"orderedList": false,
 					"answers": [
 						"Did you notice what the bureaucrat was holding?",
 						"He has only an inkpad.",
@@ -44,7 +45,6 @@
             "questions": [
                 {
                     "title": "How do I get inside the house?",
-					"orderedList": false,
                     "answers": [
                         "As the game begins, try walking east or west, then returning to the south junction (by going south).",
                         "Hmmm. The statue's facing a different direction. Peculiar, eh?",
@@ -59,7 +59,6 @@
                 },
                 {
                     "title": "Is there anything I should do with the statue of Buck Palace, the fighting letter carrier?",
-					"orderedList": false,
                     "answers": [
                         "Yes, Buck is very important.",
                         "Have you noticed you can turn Buck to point in different directions?",
@@ -68,7 +67,6 @@
                 },
                 {
                     "title": "I can't get past the water buffalo in Charo's kitchen. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Drink all the water in any pond.",
                         "Squeeze your nose with a garlic mincer.",
@@ -79,7 +77,6 @@
                 },
                 {
                     "title": "What should I do in the hedge maze?",
-					"orderedList": false,
                     "answers": [
                         "As you may have guessed, you'll need to get to a secret location within the maze.",
                         "The location of this spot is well-marked on a map of the maze.",
@@ -93,7 +90,6 @@
                 },
                 {
                     "title": "Hey, the secret location in the maze isn't any different from the other spots in the maze! What gives?",
-					"orderedList": false,
                     "answers": [
                         "The location is cosmetically the same as any other in the maze...",
                         "...but looks aren't everything.",
@@ -104,7 +100,6 @@
                 },
                 {
                     "title": "How do I open the small compartment under the cannon?",
-					"orderedList": false,
                     "answers": [
                         "You'll have to move the cannon off of the compartment's lid first.",
                         "Like most cannons, however, this one is much too heavy for a person to move.",
@@ -116,21 +111,18 @@
                 },
                 {
                     "title": "Where can I find a source of fire?",
-					"orderedList": false,
                     "answers": [
                         "There's a match inside the mansion."
                     ]
                 },
                 {
                     "title": "How do I open the hatch at the cliff?",
-					"orderedList": false,
                     "answers": [
                         "You can't open it from above. You'll find a way to open it from below later on in the story."
                     ]
                 },
                 {
                     "title": "Is there a way to get the ladder up the cliff face?",
-					"orderedList": false,
                     "answers": [
                         "It's a pretty heavy ladder.",
                         "And such a steep cliff!",
@@ -139,7 +131,6 @@
                 },
                 {
                     "title": "How do I get across the gap in the beach stairs?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't figured out how to get into the mansion, you won't be able to cross the gap. Go on to something else for now.",
                         "If you've gotten into the house and explored a little of the first floor, then this puzzle should be a downhill struggle.",
@@ -155,7 +146,6 @@
             "questions": [
                 {
                     "title": "What should I do with the fireplace?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't already done so, you may want to ENTER THE FIREPLACE.",
                         "Have you tried removing the loose brick?",
@@ -165,7 +155,6 @@
                 },
                 {
                     "title": "Is there any significance to the painting of Uncle Buddy and Aunt Hildegarde?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "It's rather moving, isn't it?",
@@ -174,7 +163,6 @@
                 },
                 {
                     "title": "Oh! I found a wall safe! How do I open it?",
-					"orderedList": false,
                     "answers": [
                         "You'll have to find the right combination.",
                         "The solution isn't exactly black and white.",
@@ -186,7 +174,6 @@
                 },
                 {
                     "title": "What do I do in the closet?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried doing anything with the coat pegs?",
                         "Try typing PULL THE THIRD PEG.",
@@ -195,7 +182,6 @@
                 },
                 {
                     "title": "Is there anything I can do with the sawed-off peg in the closet?",
-					"orderedList": false,
                     "answers": [
                         "If you don't understand how the closet works, don't go on. Develop the clues in the question above this one.",
                         "You can't actually do anything with the sawed-off peg.",
@@ -205,7 +191,6 @@
                 },
                 {
                     "title": "Can I do anything with the hole to the left of the first peg?",
-					"orderedList": false,
                     "answers": [
                         "If you don't understand how the closet works, don't go on. Develop the clues in the \"What do I do in the closet?\" question.",
                         "Since there was once a peg in this hole, there must be a floor below the cellar.",
@@ -215,7 +200,6 @@
                 },
                 {
                     "title": "What's the point of the model of downtown Tokyo?",
-					"orderedList": false,
                     "answers": [
                         "EXAMINE THE MODEL.",
                         "This is a puzzle. To solve it you will need to obtain the Big Diamond Ring, which you'll find perched on the monument in the tiny park.",
@@ -224,7 +208,6 @@
                 },
                 {
                     "title": "What is an Atomic Chihuahua?",
-					"orderedList": false,
                     "answers": [
                         "It's a chihuahua which has received an extreme amount of radiation (and isn't too happy about it either).",
                         "It's also the subject of one of your Uncle Buddy's more mundane motion",
@@ -233,7 +216,6 @@
                 },
                 {
                     "title": "How can destroy the tanks?",
-					"orderedList": false,
                     "answers": [
                         "A pressing problem, huh?",
                         "Figure out what each of the colored buttons does.",
@@ -244,7 +226,6 @@
                 },
                 {
                     "title": "How do I defeat the puny planes?",
-					"orderedList": false,
                     "answers": [
                         "Have you figured out what each of those buttons does?",
                         "The red button would certainly do the trick, but...",
@@ -254,7 +235,6 @@
                 },
                 {
                     "title": "How should I deal with the Japanese marines in the park?",
-					"orderedList": false,
                     "answers": [
                         "I suppose the black button would be quite effective.",
                         "But most of the marines, being veritable pillars of agility, would be able to scatter and escape the Atomic Chihuahua's wrath.",
@@ -265,7 +245,6 @@
                 },
                 {
                     "title": "How can I stop the missile from destroying the Atomic Chihuahua?",
-					"orderedList": false,
                     "answers": [
                         "Pressing the red button will do the job but...",
                         "...fuel is precious, and there's a better way to defeat the missile.",
@@ -277,7 +256,6 @@
                 },
                 {
                     "title": "How can I tell the Atomic Chihuahua to take the Big Diamond Ring?",
-					"orderedList": false,
                     "answers": [
                         "First, you'll have to get the Chihuahua to the east end of the park.",
                         "Once you're there, just PRESS THE BLUE BUTTON."
@@ -285,7 +263,6 @@
                 },
                 {
                     "title": "The Chihuahua has the Big Diamond Ring. Now what?",
-					"orderedList": false,
                     "answers": [
                         "You want to take the ring from him.",
                         "Since the model is encased in thick plastic, it won't be easy.",
@@ -297,7 +274,6 @@
                 },
                 {
                     "title": "I'm pressing the red button but the Atomic Chihuahua is only gagging. What's wrong?",
-					"orderedList": false,
                     "answers": [
                         "Due to limited resources, the Atomic Chihuahua can breathe fire only three times.",
                         "So you'd better make each use of the red button count.",
@@ -306,7 +282,6 @@
                 },
                 {
                     "title": "How do I get up the stairs in the foyer?",
-					"orderedList": false,
                     "answers": [
                         "You won't be able to stop the stairs from flattening out until you've been to the second floor.",
                         "You'll have to come up with another way to get upstairs."
@@ -314,7 +289,6 @@
                 },
                 {
                     "title": "How do I get to the second floor?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried walking up the stairs?",
                         "Hmmm. It's too bad this house doesn't have an elevator.",
@@ -324,28 +298,24 @@
                 },
                 {
                     "title": "When I show the slide, all that appears on the screen is a blur of colored light. What's going on?",
-					"orderedList": false,
                     "answers": [
                         "Did you remember to focus the slide projector?"
                     ]
                 },
                 {
                     "title": "When I show the film strip, nothing appears on the screen. What's the matter?",
-					"orderedList": false,
                     "answers": [
                         "Did you remember to remove the lens cap?"
                     ]
                 },
                 {
                     "title": "Am I a victim of subliminal advertising when I show the film strip?",
-					"orderedList": false,
                     "answers": [
                         "No."
                     ]
                 },
                 {
                     "title": "Okay, what am I supposed to do in the Projection Booth?",
-					"orderedList": false,
                     "answers": [
                         "There is a message on the slide and the strip of film.",
                         "Viewing the slide by itself or the strip of film by itself reveals only meaningless bits and pieces of the message.",
@@ -355,7 +325,6 @@
                 },
                 {
                     "title": "Is the box of Cuban cigars important?",
-					"orderedList": false,
                     "answers": [
                         "It was to Uncle Buddy.",
                         "Don't go on unless you've discovered the bust of Fidel Castro.",
@@ -364,7 +333,6 @@
                 },
                 {
                     "title": "What can I do with the piano?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried playing it?",
                         "Playing the right song might cause something to happen.",
@@ -374,7 +342,6 @@
                 },
                 {
                     "title": "Is there a way to enter the passage to the north of the crawlspace?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "The entrance to the passage is large enough for you to enter, but it's partially blocked by the ceiling.",
@@ -383,7 +350,6 @@
                 },
                 {
                     "title": "How do I raise the ceiling in the crawlspace?",
-					"orderedList": false,
                     "answers": [
                         "Since the ceiling is balanced across a wooden beam, you can think of the ceiling as a see-saw of sorts.",
                         "If you could tip the ceiling down in one half of the crawlspace, it would effectively raise the ceiling in the other half.",
@@ -394,7 +360,6 @@
                 },
                 {
                     "title": "How do I remove one of the pillars?",
-					"orderedList": false,
                     "answers": [
                         "The ceiling of the crawlspace is very heavy. As the game starts, removing the pillars is impossible, since the ceiling's weight is evenly distributed.",
                         "If you could redistribute the ceiling's weight to one end of the crawlspace, you'd be able to remove the pillar at the other end.",
@@ -410,7 +375,6 @@
             "questions": [
                 {
                     "title": "How do I open the panel in the ceiling?",
-					"orderedList": false,
                     "answers": [
                         "\"It won't budge from this side.\"",
                         "Oh well. At least you've learned that there's a room above this floor.",
@@ -419,7 +383,6 @@
                 },
                 {
                     "title": "I know that there's a room above the second floor, but I don't know how to get there.",
-					"orderedList": false,
                     "answers": [
                         "You'll need to use the closet/elevator to get there.",
                         "Have you ever been on top of the closet, by walking through one of the closet doors when the elevator is one floor below?",
@@ -436,14 +399,12 @@
                 },
                 {
                     "title": "What the heck is a newel?",
-					"orderedList": false,
                     "answers": [
                         "It's a wooden knob, mounted on the bannister at the bottom or (in this case) the top of a staircase."
                     ]
                 },
                 {
                     "title": "What's so unusual about the newel?",
-					"orderedList": false,
                     "answers": [
                         "Have you tried examining it?",
                         "Have you tried turning it?",
@@ -453,7 +414,6 @@
                 },
                 {
                     "title": "How do I get the velvet sack?",
-					"orderedList": false,
                     "answers": [
                         "If you merely open the window, the sack will fall to the ground, damaging its contents.",
                         "Since the top of the sack is sticking out from under the window, you can HOLD THE SACK before you OPEN THE WINDOW."
@@ -466,7 +426,6 @@
             "questions": [
                 {
                     "title": "What can I put in the computer's slot?",
-					"orderedList": false,
                     "answers": [
                         "It's a pretty old contraption which dates back before the days of magnetic storage devices.",
                         "So, the slot probably accepts punch cards."
@@ -474,7 +433,6 @@
                 },
                 {
                     "title": "Egads! How do I remove the floppy disk from the disk drive!",
-					"orderedList": false,
                     "answers": [
                         "Just open up the disk drive on your computer at home and remove the copy of <em>Hollywood Hijinx</em> from the drive. It's that simple.",
                         "Of course, if you have a hard drive, this is not recommended."
@@ -482,7 +440,6 @@
                 },
                 {
                     "title": "Okay, how many cards will I need, and where will I find them?",
-					"orderedList": false,
                     "answers": [
                         "You'll need seven cards — one for each row of lights on the computer's display.",
                         "You should only develop the following seven clues if you're in dire need. Developing one of them will likely give away another puzzle in the game.",
@@ -498,7 +455,6 @@
                 },
                 {
                     "title": "Do I have to insert the cards in any order?",
-					"orderedList": false,
                     "answers": [
                         "Yes.",
                         "Some of you may realize that the colors of the cards correspond to the colors of the rainbow.",
@@ -509,7 +465,6 @@
                 },
                 {
                     "title": "I've put the cards into the computer in the correct order. Now what?",
-					"orderedList": false,
                     "answers": [
                         "Look at the lights.",
                         "Now find a telephone and dial that number.",
@@ -523,7 +478,6 @@
             "questions": [
                 {
                     "title": "The attic? What attic?!",
-					"orderedList": false,
                     "answers": [
                         "If you haven't yet been to the second floor of the mansion, don't continue to develop answers in this section.",
                         "Didn't the ceiling panel in the upstairs hall ever strike you as funny?",
@@ -533,7 +487,6 @@
                 },
                 {
                     "title": "Hey, the trunk won't open! What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Don't fret. Type OPEN THE PANEL.",
                         "Now, opening the trunk should be a cinch."
@@ -546,14 +499,12 @@
             "questions": [
                 {
                     "title": "Is there a way to climb back up the beach stairs?",
-					"orderedList": false,
                     "answers": [
                         "No."
                     ]
                 },
                 {
                     "title": "What should I do with the small, smoldering fire?",
-					"orderedList": false,
                     "answers": [
                         "Putting it out might upset Morgan Fairchild.",
                         "She probably wouldn't mind if you use it to light matches and candles, though."
@@ -561,7 +512,6 @@
                 },
                 {
                     "title": "I'm swimming in the ocean. I'd like to swim underwater, but the undertow here is too strong for me. What to do?",
-					"orderedList": false,
                     "answers": [
                         "If you're not at the inlet, you're developing answers to the wrong question.",
                         "SWIM SOUTH into the cave. The undertow shouldn't be too bad there."
@@ -569,7 +519,6 @@
                 },
                 {
                     "title": "I keep running out of air when I'm swimming underwater. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "You should swim in the opposite direction of the current.",
                         "Enter the water at the Grotto and swim down, then down again. Next swim west, then up twice."
@@ -577,7 +526,6 @@
                 },
                 {
                     "title": "What do I do with the squid?",
-					"orderedList": false,
                     "answers": [
                         "Fried Calamari is an excellent dish.",
                         "First kill the squid, then...",
@@ -589,7 +537,6 @@
                 },
                 {
                     "title": "Gee, it's awfully dark in this cave. Is there any way to get some light in here?",
-					"orderedList": false,
                     "answers": [
                         "Any Boy Scout could tell you how.",
                         "You'll need to use a match.",
@@ -600,14 +547,12 @@
                 },
                 {
                     "title": "How do I open the hatch in the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "PULL THE CHAIN."
                     ]
                 },
                 {
                     "title": "How do I get out of the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "The safe has potential. Potential energy, that is.",
                         "If the safe were to drop on one end of the plank...",
@@ -618,7 +563,6 @@
                 },
                 {
                     "title": "How do I open the safe?",
-					"orderedList": false,
                     "answers": [
                         "If the safe is still suspended in the air, don't continue developing answers to this question. You'll have to figure out how to get the safe onto the ground first.",
                         "This is a combination safe, and the combination is right in front of you.",
@@ -632,7 +576,6 @@
                 },
                 {
                     "title": "Is there a way to return to the cliff from the bomb shelter?",
-					"orderedList": false,
                     "answers": [
                         "If you haven't already escaped the bomb shelter once, you're developing answers to the wrong question. See the question, \"How do I get out of the bomb shelter?\"",
                         "Did you notice that ladder lying on the cliff?",
@@ -647,14 +590,12 @@
             "questions": [
                 {
                     "title": "Prop vault? Have I missed something?",
-					"orderedList": false,
                     "answers": [
                         "Yes, you have. Develop the hints in this section only if you've been to the vault. If you haven't been here, just keep playing — you'll wind up here eventually."
                     ]
                 },
                 {
                     "title": "How do I deal with Cousin Herman?",
-					"orderedList": false,
                     "answers": [
                         "Why not do unto Herman as he does unto you?",
                         "There is a reason why Herman keeps picking up weapons and hitting you with them.",
@@ -665,7 +606,6 @@
                 },
                 {
                     "title": "Yow! Uncle Buddy doesn't look so good. What should I do?",
-					"orderedList": false,
                     "answers": [
                         "Call the make-up man?",
                         "No, Uncle Buddy hasn't aged too well. But after all he's been dead quite awhile.",
@@ -674,7 +614,6 @@
                 },
                 {
                     "title": "Ack! How do I shut off the buzzsaw??",
-					"orderedList": false,
                     "answers": [
                         "You'll have to get Herman out of the way first.",
                         "Once you have, just TURN OFF THE SAW."
@@ -687,7 +626,6 @@
             "questions": [
                 {
                     "title": "What are these pieces of paper with lines on them?",
-					"orderedList": false,
                     "answers": [
                         "Each of the two pieces of paper is one half of something.",
                         "They're halves of a map, which depicts the hedge maze.",
@@ -696,7 +634,6 @@
                 },
                 {
                     "title": "I found a note and a peg. Where do I go?",
-					"orderedList": false,
                     "answers": [
                         "\"Come on down.\"",
                         "The peg-hole to the left of the set of pegs might have tipped you off that there's another floor below the cellar.",
@@ -712,7 +649,6 @@
             "questions": [
                 {
                     "title": "Here are the names of the treasures and the locations in which they're found:",
-					"orderedList": false,
 					"columns": [
 						{"header": "Treasure", "width": "50%"},
 						{"header": "Location", "width": "50%"}
@@ -737,7 +673,6 @@
         {
             "questions": [
 				{
-					"orderedList": false,
 					"columns": [
 						{"header": "Event", "width": "70%"},
 						{"header": "Points", "width": "30%"}
@@ -757,7 +692,6 @@
         },
 		{	"questions": [
 				{
-					"orderedList": false,
 					"title": "Have you ever:",
 					"answers": [
 						"...rung the doorbell? (Try this several times.)",

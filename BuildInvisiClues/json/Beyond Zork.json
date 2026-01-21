@@ -1,5 +1,6 @@
 {
 	"revision": 1.0,
+	"singleBulletPoints": true,
 	"header": {
 		"title": "Beyond Zork",
 		"year": "1987",
@@ -1255,6 +1256,7 @@
 				{
 					"title": "Weapons",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Dagger, Shillelagh, Spade, Battle-axe, Longsword, Vague Outline/Phase Blade"
 					]
@@ -1262,6 +1264,7 @@
 				{
 					"title": "Animals",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Pterodactyl, Minx, Butterfly/Caterpillar"
 					]
@@ -1274,6 +1277,7 @@
 				{
 					"title": "Wands",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Anethesia, Annihilation, Dispel, Eversion, Levitation, Sayonara"
 					]
@@ -1281,6 +1285,7 @@
 				{
 					"title": "Scrolls",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Fireworks, Gating, Honing, Mischief, Protection, Refreshment"
 					]
@@ -1288,6 +1293,7 @@
 				{
 					"title": "Potions",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Death, Enlightenment, Forgetfulness, Healing, Might"
 					]
@@ -1299,6 +1305,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Treasure", "width": "40%"},
 						{"header": "Location", "width": "40%"},
@@ -1325,6 +1332,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"asking the old woman (each one) about almost anything?",
 						"asking the cook about himself?",

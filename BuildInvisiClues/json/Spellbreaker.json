@@ -1210,6 +1210,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Found in...", "width": "25%"},
 						{"header": "Decoration", "width": "25%"},
@@ -1252,6 +1253,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Spell", "width": "25%"},
 						{"header": "Cubes that increase chance of success", "width": "75%"}
@@ -1271,7 +1273,18 @@
 						["JINDAK", "Light, Connectivity"],
 						["ESPNIS", "Mind, Death"],
 						["CASKLY", "Change, Connectivity"],
-						["THROCK", "Life, Water"],
+						["THROCK", "Life, Water"]
+					]
+				}
+			],
+			"title": "Details of Cubes' Effects on Spells"
+		}, 
+		{
+			"questions": [
+				{
+					"orderedList": false,
+					"noPadding": true,
+					"answers": [
 						"If you have the cube that BLORPLEs you to the Magic Room, it gives an extra-strong power boost to all spells. With this cube in your possession, only the GIRGOL spell can ever fail under normal circumstances."
 					]
 				}, 
@@ -1282,13 +1295,13 @@
 						"Then you can memorize the spell from your book and use it repeatedly."
 					]
 				}
-			],
-			"title": "Details of Cubes' Effects on Spells"
+			]
 		}, 
 		{
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Spell", "width": "18%"},
 						{"header": "Location", "width": "82%"}
@@ -1318,6 +1331,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"25 points for each of 13 cubes, for a total of 325.",
 						"15 points for reading or using BLORPLE the first time.",
@@ -1348,6 +1362,7 @@
 				{
 					"title": "What did we name the cubes here at Infocom?",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Dave gave them boring names like \"Earth\" or \"Air.\"",
 						"Gary gave them all incomprehensible (to others) single-letter names, because he hates typing.",
@@ -1361,6 +1376,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"flying on the magic carpet to the Outcropping?",
 						"TINSOTing the magic carpet, then flying to the Outcropping?",

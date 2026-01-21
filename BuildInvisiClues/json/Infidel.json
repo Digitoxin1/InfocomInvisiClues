@@ -1,5 +1,5 @@
 {
-    "revision": 1.0,
+    "revision": 1.0,	
 	"header": {
 		"title": "Infidel",
 		"year": "1983",
@@ -538,6 +538,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Object", "width": "38%"},
 						{"header": "Location", "width": "38%"},
@@ -557,6 +558,7 @@
 				},
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Other points are awarded for:",
 					"columnHeaders": false,
 					"columns": [
@@ -587,6 +589,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"reading the matchbook?",
 						"reading the inside of the matchbook?",

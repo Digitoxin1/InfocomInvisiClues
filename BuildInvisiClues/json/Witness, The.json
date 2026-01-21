@@ -613,6 +613,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "(after you've finished the game)",
 					"answers": [					
 						"...reading the scroll in the entry?",

@@ -1144,6 +1144,7 @@
             "questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Action", "width": "85%"},
 						{"header": "Points", "width": "15%", "align": "right"}
@@ -1192,6 +1193,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Action", "width": "85%"},
 						{"header": "Points", "width": "15%", "align": "right"}
@@ -1213,6 +1215,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"title": "Have you tried:",
 					"answers": [
 						"reading the theater marquee before delivering the envelope?",

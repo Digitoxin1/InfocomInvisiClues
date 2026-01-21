@@ -1,5 +1,6 @@
 {
     "revision": 1.0,
+	"singleBulletPoints": true,
   "header": {
     "title": "Trinity",
     "year": "1986",
@@ -1069,6 +1070,7 @@
             "questions": [
 				{
 					"numberedList": true,
+					"noPadding": true,
 					"anyAnswer": true,
 					"answers": [
 						"LOOK AT THE SUNDIAL in the Wabe. The quotation is from Lewis Carroll's <em>Through the Looking-Glass</em>.",
@@ -1094,6 +1096,7 @@
 			"questions": [
 				{
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Action", "width": "80%"},
 						{"header": "Points", "width": "20%", "align": "right"}
@@ -1165,6 +1168,7 @@
 				{
 					"title": "Things You Can Ask the Bird Woman About",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"TRINITY or PLUTONIUM",
 						"ROADRUNNER (before and after you see it)",
@@ -1194,6 +1198,7 @@
 				{
 					"title": "Have You Tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"to stand in the perambulator?",
 						"to give the credit card or small coin to the oarsman or the bird woman?",

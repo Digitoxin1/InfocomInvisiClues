@@ -1,6 +1,8 @@
 {
 	"revision": 1.0,
 	"numberedList": true,
+	"uppercaseHeaders": true,
+	"singleBulletPoints": true,
 	"header": {
 	    "title": "Ballyhoo",
 		"year": "1986",
@@ -9,8 +11,8 @@
 		"section1": {
 			"title": "What are InvisiClues?",
 			"content": [
-				"The essence of all interactive fiction is solving problems. The purpose of InvisiClues hint booklets is to maximize your enjoyment of the story by giving you only the hints you need to continue and complete the story.",
-				"The invisible hints generally progress from a gentle nudge in the right direction to a full answer. The questions, which naturally have to be visible, have been worded to give away as little as possible. You should not use the presence or absence of a question on a certain topic as an indication of importance, and you should not assume that long answers are associated with important questions. This booklet includes dummy questions and answers in order to minimize the problem."
+				"Ballyhoo is a standard-level interactive story. Although it is designed to allow players who are unfamiliar with interactive fiction to see many of the puzzles, even experienced players may find some of the puzzles difficult to solve without help. Even the best players sometimes get stuck. The purpose of lnvisiClues is to help you get past bottlenecks and continue with the story so you can enjoy it.",
+				"The invisible hints are designed to progress from a gentle (or sometimes silly) nudge in the right direction to a full answer. The questions and section headings attempt to give away as little as possible. Many of the puzzles are interconnected, so you may have to look under more than one section heading to find all the questions you have about a particular problem. You should not assume that a question on a certain topic indicates that the topic even exists in the story. Also, the length of the answers may not mean anything. This booklet includes dummy questions and answers to help confuse that issue. "
 			]
 		},
 		"section2": {
@@ -1353,6 +1355,7 @@
 				{
 					"title": "There are a total of 200 points. Ten points are scored for each of the following:",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Walking all the way across the tightrope",
 						"Talking to Harry with helium in your lungs",
@@ -1385,6 +1388,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"watching Comrade Thumb try to get a drink of water, but NOT helping him?",
 						"applauding anyone?",

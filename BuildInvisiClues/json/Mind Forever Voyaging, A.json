@@ -457,6 +457,7 @@
 				{
 					"title": "Notes",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"If an event or sight is the same in two or more different years, you get credit for it only the first time you record it. For example, if you recorded a closed orphanage in 2061, the associated internal recording points would be credited to 2061, for the benefit of Perelman's evaluation of your recordings. If the orphanage was also closed in 2071, recording the fact would have an effect only if you hadn't already recorded it in 2061.<br><br>The following listing has such events and sights listed only under the simulation years during which they first appear or appear differently."
 					]
@@ -464,6 +465,7 @@
 				{
 					"title": "2051:",
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Points", "width": "12%", "align": "center"},
 						{"header": "Event/Sight (and how to get it)", "width": "88%"}
@@ -501,6 +503,7 @@
 				{
 					"title": "2061:",
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Points", "width": "12%", "align": "center"},
 						{"header": "Event/Sight (and how to get it)", "width": "88%"}
@@ -556,6 +559,7 @@
 				{
 					"title": "2071:",
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Points", "width": "12%", "align": "center"},
 						{"header": "Event/Sight (and how to get it)", "width": "88%"}
@@ -618,6 +622,7 @@
 				{
 					"title": "1081:",
 					"orderedList": false,
+					"noPadding": true,
 					"columns": [
 						{"header": "Points", "width": "12%", "align": "center"},
 						{"header": "Event/Sight (and how to get it)", "width": "88%"}
@@ -644,6 +649,7 @@
 				{
 					"title": "Have you ever:",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"asked Perelman about himself, his daughter Esther, Dr. Grimwold, Senator Ryder, Aseejh Randu, the Plan, Vera Gold, Alyson Price, Eleanor Fortzman, Emily Warren, his resignation letter, mindex, clerkmatons, or your parents?",
 						"asked Perelman to look at your recordings before you've ever entered Simulation Mode? Before you've ever recorded anything?",

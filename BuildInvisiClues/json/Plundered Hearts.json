@@ -1,5 +1,6 @@
 {
     "revision": 1.0,
+	"singleBulletPoints": true,
 	"header": {
 		"title": "Plundered Hearts",
 		"year": "1987",
@@ -463,6 +464,7 @@
 				{
 					"title": "One point for each of the following actions:",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"TAKE PILE OF CLOTHES",
 						"TAKE BOTTLE",
@@ -499,6 +501,7 @@
 				{
 					"title": "Have you tried...",
 					"orderedList": false,
+					"noPadding": true,
 					"answers": [
 						"Looking under your chemise?",
 						"Examining your unmentionables?",

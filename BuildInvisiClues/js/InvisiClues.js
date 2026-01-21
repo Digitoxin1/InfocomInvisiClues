@@ -1,413 +1,538 @@
-/*InvisiClues.js v2.1*/
-var invisiClues = {
+/*InvisiClues.js v2.2*/
+const invisiClues = {
 	index: 1,	
 	numberedList: false,
+	orderedList: true,
 	displayTOC: true,
+	offsetAnswers: false,
+	singleBulletPoints: false,
+	uppercaseHeaders: false,
+	noPadding: false,
 	scrollTopPos: 0,
 	navSections: [],
-	processJSON: function() {
-		var data = JSON.parse(document.getElementById('jsonData').textContent);
-		var main = document.getElementById('section0');
-		
+	
+	dom: {
+		body: null,
+		main: null,
+		toc: null,
+		navSelect: null,
+		topLink: null
+	},
+	
+	applyConfig(data) {
 		if ('numberedList' in data) {
 			this.numberedList = data.numberedList;
 		}
 		if ('displayTOC' in data) {
 			this.displayTOC = data.displayTOC;
 		}
+		if ('offsetAnswers' in data) {
+			this.offsetAnswers = data.offsetAnswers;
+		}
+		if ('singleBulletPoints' in data) {
+			this.singleBulletPoints = data.singleBulletPoints;
+		}
+		if ('uppercaseHeaders' in data) {
+			this.uppercaseHeaders = data.uppercaseHeaders;
+		}
+		if ('orderedList' in data) {
+			this.orderedList = data.orderedList;
+		}
+		if ('noPadding' in data) {
+			this.noPadding = data.noPadding;
+		}
+	},
+	
+	buildTOC(main) {
+		const tocTitle = this.titleElement("Table of Contents", "h2", false, false, true);
+		tocTitle.id = "toc";
+		main.appendChild(tocTitle);
+
+		const tocDiv = document.createElement("div");
+		tocDiv.className = "toc";
+
+		const ul = document.createElement("ul");
+
+		tocDiv.appendChild(ul);
+		main.appendChild(tocDiv);
+
+		const introLi = this.tocElement("section0", "Introduction", true);
+		ul.appendChild(introLi);
+
+		this.navElement("section0", "Introduction");
+		this.navElement("toc", "Table of Contents");
+
+		return ul;
+	},
+  
+	processJSON() {
+		const jsonEl = document.getElementById("jsonData");
+		if (!jsonEl) return;
 		
-		this.processHeader(main, data.header);
-				
-				
-		if (this.displayTOC) {
-			var tocElem = this.processTOC(main);	
-			var liElem = this.tocElement('section0', 'Introduction', true);
-			this.navElement('section0', 'Introduction');
-			tocElem.appendChild(liElem);	
-			this.navElement('toc', 'Table of Contents');
-		} else {
-			var tocElem = null;
-		};		
-		if ('sections' in data) {
-			for (var i = 0; i < data.sections.length; i++) {
-				this.processSection(main, data.sections[i], tocElem, true);
-			}
+		const data = JSON.parse(jsonEl.textContent || "{}");
+		
+		this.dom.body = document.body;
+		this.dom.main = document.getElementById("section0");
+		
+		if (!this.dom.main) return;
+		
+		this.applyConfig(data);		
+		
+		this.processHeader(this.dom.main, data.header);
+		
+		const tocList = this.displayTOC ? this.buildTOC(this.dom.main) : null;
+		
+		const sections = data.sections ?? [];
+		for (let i = 0; i < sections.length; i++) {
+			this.processSection(this.dom.main, sections[i], tocList, this.uppercaseHeaders);
 		}
-		if (this.displayTOC) {
-			document.querySelector("body").setAttribute('class', 'hasNavBar');
-			window.addEventListener("resize", this.refreshTopPos);
-			window.addEventListener("scroll", this.toggleTopButton);
-			window.addEventListener("scrollend", this.refreshNavBar);
-			document.querySelector(".topNav select").addEventListener("change", this.navSection);			
-			this.populateNavSections();
-			this.refreshTopPos();
-			this.refreshNavBar();
-			document.querySelector(".topNav select").focus();
+		
+		if (!this.displayTOC) return;
+		
+		this.dom.body.classList.add("hasNavBar");
+		this.dom.navSelect = document.querySelector(".topNav select");
+		this.dom.topLink = document.querySelector("a.top");
+		this.dom.toc = document.getElementById("toc");
+		
+		window.addEventListener("resize", () => this.refreshTopPos());
+		window.addEventListener("scroll", () => this.toggleTopButton());
+		window.addEventListener("scrollend", () => this.refreshNavBar());
+		
+		if (this.dom.navSelect) {
+			this.dom.navSelect.addEventListener("change", this.navSection);
+			this.dom.navSelect.focus();
 		}
+		
+		this.populateNavSections();
+		this.refreshTopPos();
+		this.refreshNavBar();
 	},
-	populateNavSections: function () {
-		var navSections = document.querySelectorAll('.navSection');
-		this.navSections = [...navSections];
-		this.navSections.reverse();
+	
+	populateNavSections() {
+		this.navSections = Array.from(document.querySelectorAll(".navSection")).reverse()
 	},
-	refreshTopPos: function() {
-		var toc = document.getElementById("toc");
-		invisiClues.scrollTopPos = toc.offsetTop;
+	
+	refreshTopPos() {
+		const toc = this.dom.toc ?? document.getElementById("toc");
+		if (!toc) return;
+		this.scrollTopPos = toc.offsetTop;
 	},
-	refreshNavBar: function () {
-		for (var i = 0; i < invisiClues.navSections.length; i++) {
-			var navSection = invisiClues.navSections[i];
-			if (navSection.offsetTop < scrollY + 100) {
-				document.querySelector(".topNav select").value = '#' + navSection.id;
+	
+	refreshNavBar() {
+		const select = this.dom.navSelect ?? document.querySelector(".topNav select");
+		if (!select) return;
+	
+		for (let i = 0; i < this.navSections.length; i++) {
+			const s = this.navSections[i];
+			if (s.offsetTop < window.scrollY + 100) {
+				select.value = `#${s.id}`;
 				break;
 			}
 		}
 	},
-	toggleTopButton: function() {
-		var top = document.querySelector("a.top");
-		var scrollY = this.scrollY || 0;
-		if (scrollY > invisiClues.scrollTopPos + 30) {
-			top.setAttribute('class', 'top visible');
-			top.setAttribute('href', '#toc');
+	toggleTopButton() {
+		const top = this.dom.topLink ?? document.querySelector("a.top");
+		if (!top) return;
+		
+		const y = window.scrollY || 0;
+		if (y > this.scrollTopPos + 30) {
+			top.className = "top visible";
+			top.href = "#toc";
 		} else {
-			top.setAttribute('class', 'top');
-			top.removeAttribute('href');
+			top.className = "top";
+			top.removeAttribute("href");
 		}
 	},
-	simpleElement: function(type, data) {
-		var elem = document.createElement(type);
-		elem.innerHTML = data;
-		return elem;
+	
+	simpleElement(type, html) {
+		const el = document.createElement(type);
+		el.innerHTML = html ?? "";
+		return el;
 	},
-	processHeaderSection: function(headerElem, section) {
-		if ('title' in section) {
-			headerElem.appendChild(this.simpleElement('h3', section.title));
+	
+	processHeaderSection(headerElem, section) {
+		if (!section) return;
+		
+		if (section.title) {
+			headerElem.appendChild(this.simpleElement("h3", section.title));
 		}
-		if ('content' in section) {
-			for (var i = 0; i < section.content.length; i++) {
-				headerElem.appendChild(this.simpleElement('p', section.content[i]));
-			}
+		
+		const content = section.content ?? [];
+		
+		for (let i = 0; i < content.length; i++) {
+			headerElem.appendChild(this.simpleElement("p", content[i]));
 		}
 	},
-	processHeader: function(main, header) {
-		var headerElem = document.createElement('div');
-		headerElem.setAttribute('class', 'header');
-		if ('image' in header) {
-			var imgElem = document.createElement('img');
-			imgElem.setAttribute('src', header.image);
-			headerElem.appendChild(imgElem);
+	
+	processHeader(main, header) {
+		if (!header) return;
+		
+		const headerElem = document.createElement('div');
+		headerElem.className = "header";
+		
+		if (header.image) {
+			const img = document.createElement("img");
+			img.src = header.image;
+			headerElem.appendChild(img);
 		}
-		if ('title' in header) {
-			headerElem.appendChild(this.simpleElement('h1', header.title + ' InvisiClues™'));
+		
+		if (header.title) {
+			headerElem.appendChild(this.simpleElement("h1", `${header.title} InvisiClues™`));
 		}
-		headerElem.appendChild(this.simpleElement('h2', "Introduction"));
-		if ('section1' in header) {
-			this.processHeaderSection(headerElem, header.section1);
-		}
-		if ('section2' in header) {
-			this.processHeaderSection(headerElem, header.section2);
-		}
-		if ('sampleQuestions' in header) {
-			var sampleElem = document.createElement('div');
-			this.processSection(sampleElem, header.sampleQuestions, false);
+		
+		headerElem.appendChild(this.simpleElement("h2", "Introduction"));
+		
+		this.processHeaderSection(headerElem, header.section1);
+		this.processHeaderSection(headerElem, header.section2);
+		
+		if (header.sampleQuestions) {
+			const sampleElem = document.createElement("div");
+			this.processSection(sampleElem, header.sampleQuestions, null, false, null);
 			headerElem.appendChild(sampleElem);
 		}
-		if ('section3' in header) {
-			this.processHeaderSection(headerElem, header.section3);
-		}
+
+		this.processHeaderSection(headerElem, header.section3);
+
 		main.appendChild(headerElem);
 	},
-	processTOC: function(main) {
-		var tocElem = this.titleElement('Table of Contents', 'h2', false, false, true);
-		tocElem.setAttribute('id', 'toc');
-		main.appendChild(tocElem);
-		var elem = document.createElement('ul');
-		elem.setAttribute('class', 'indented');
-		main.appendChild(elem);
-		return elem;
-	},
-	tocElement: function(sectionId, title, hasQuestions) {
-		var elem = document.createElement('li');
-		if (hasQuestions) {
-			var aElem = document.createElement('a');
-			aElem.innerHTML = title;
-			aElem.setAttribute('href', '#' + sectionId);
-			elem.appendChild(aElem);
-		} else {
-			elem.innerHTML = title;
+	
+	tocElement(sectionId, title, hasQuestions) {
+		const li = document.createElement("li");
+		if (!hasQuestions) {
+			li.innerHTML = title;
+			return li;
 		}
-		return elem;
+		
+		const a = document.createElement("a");
+		a.innerHTML = title;
+		a.href = `#${sectionId}`;
+		li.appendChild(a);
+		return li;
 	},
-	navGroup: function (title) {
-		var optGroup = document.createElement('optgroup');
-		optGroup.setAttribute('label', title);
-		document.querySelector(".topNav select").appendChild(optGroup);
-		return optGroup;
+	
+	navGroup(title) {
+		const select = document.querySelector(".topNav select");
+		if (!select) return null;
+
+		const group = document.createElement("optgroup");
+		group.label = title;
+		select.appendChild(group);
+		return group;
 	},
-	navElement: function (sectionId, title, optGroup) {
-		var opt = document.createElement('option');
-		opt.setAttribute('value', '#' + sectionId);
+	
+	navElement(sectionId, title, optGroup) {
+		const select = document.querySelector(".topNav select");
+		if (!select) return;
+
+		const opt = document.createElement("option");
+		opt.value = `#${sectionId}`;
 		opt.innerHTML = title;
-		if (optGroup) {
-			optGroup.appendChild(opt);
-		} else {
-			document.querySelector(".topNav select").appendChild(opt);
-		}
+
+		(optGroup ?? select).appendChild(opt);
 	},
-	processSection: function(main, section, ulElem, upper, optGroup) {
-		if ('title' in section && section.title != '') {
-			if (!('toc' in section)) {
-				section.toc = true;
+	
+	processSection(main, section, tocUl, upper, optGroup) {
+		if (!section) return;
+		
+		let liElem = null;
+		
+		const titleText = section.title ?? "";
+		if (titleText !== "") {
+			const tocEnabled = section.toc ?? true;
+			const tocTitle = section.tocTitle ?? titleText;
+			
+			if (Object.prototype.hasOwnProperty.call(section, "upper")) {
+				upper = !!section.upper;
 			}
-			var title = section.title;
-			if ('tocTitle' in section) {
-				var tocTitle = section.tocTitle;
-			} else {
-				var tocTitle = section.title;
-			}
-			if ('upper' in section) {
-				upper = section.upper;
-			}
-			var titleElem = this.titleElement(section.title, (section.toc ? 'h2' : 'h5'), section.toc, upper, section.toc);
-			var sectionId = titleElem.getAttribute('id');
-			main.appendChild(titleElem);	
-			if (ulElem && section.toc) {
-				var hasQuestions = 'questions' in section && section.questions.length > 0;
-				var hasQuestions = hasQuestions || ('images' in section && section.images.length > 0);
-				var liElem = this.tocElement(sectionId, tocTitle, hasQuestions);
+			
+			const titleEl = this.titleElement(titleText, tocEnabled ? "h2" : "h5", tocEnabled, upper, tocEnabled);
+
+			const sectionId = titleEl.id;
+			main.appendChild(titleEl);
+			
+			if (tocUl && tocEnabled) {
+				const hasQuestions = (section.questions?.length ?? 0) > 0 || 
+					(section.images?.length ?? 0) > 0 || 
+					(section.paragraphs?.length ?? 0) > 0;
+					
+				liElem = this.tocElement(sectionId, tocTitle, hasQuestions);
+				tocUl.appendChild(liElem);
+				
 				if (hasQuestions) {
 					this.navElement(sectionId, tocTitle, optGroup);
 				}
-				ulElem.appendChild(liElem);
-			} else {
-				var liElem = null;
 			}
 		}
-		if ('subTitle' in section && section.subTitle != '') {
-			main.appendChild(this.titleElement(section.subTitle, 'h4', false, false));
-		}
-		if ('questions' in section) {
-			for (var i = 0; i < section.questions.length; i++) {
-				main.appendChild(this.questionElement(section.questions[i]));
-			}
-		}
-		if ('images' in section) {
-			for (var i = 0; i < section.images.length; i++) {
-				main.appendChild(this.imageElement(section.images[i]));
-			}
-		}
-		if ('subSections' in section) {
-			if (section.subSections.length > 0) { 
-				var subOptGroup = this.navGroup(tocTitle);
-				for (var i = 0; i < section.subSections.length; i++) {
-					if (liElem) {
-						var ulSubElem = document.createElement('ul');
-						ulSubElem.setAttribute('class', 'indented');
-						liElem.appendChild(ulSubElem);
-					} else {
-						var ulSubElem = null;
-					}
-					this.processSection(main, section.subSections[i], ulSubElem, false, subOptGroup);
-				}
-			}
-		}
-	},
-	titleElement: function(text, type, setId, upper, navSection) {
-		var elem = document.createElement(type);
-		if (setId) {
-			elem.setAttribute('id', 'section' + this.index);
-			this.index ++;
-		}
-		var classList = [];
-		if (upper) {
-			classList.push('upper');
-		}
-		if (navSection) {
-			classList.push('navSection');
-		}
-		if (classList.length > 0) {
-			elem.setAttribute('class', classList.join(' '));
-		}
-		elem.innerHTML = text;
 		
-		return elem;
+		if (section.subTitle) {
+			main.appendChild(this.titleElement(section.subTitle, "h4", false, false, false));
+		}
+		
+		const paragraphs = section.paragraphs ?? [];
+		for (let i = 0; i < paragraphs.length; i++) {
+			main.appendChild(this.simpleElement("p", paragraphs[i]));
+		}
+		
+		if (Array.isArray(section.questions)) {
+			const hiddenTitles = !!section.hiddenTitles;
+			for (let i = 0; i < section.questions.length; i++) {
+				main.appendChild(this.questionElement(section.questions[i], i, hiddenTitles));
+			}
+		}
+		
+		const images = section.images ?? [];
+		for (let i = 0; i < images.length; i++) {
+			main.appendChild(this.imageElement(images[i]));
+		}
+		
+		const subs = section.subSections ?? [];
+		if (subs.length > 0) {
+			const groupTitle = section.tocTitle ?? section.title ?? "";
+			const subGroup = this.navGroup(groupTitle);
+			
+			for (let i = 0; i < subs.length; i++) {
+				let ulSub = null;
+				if (liElem) {
+					ulSub = document.createElement("ul");
+					ulSub.className = "indented";
+					liElem.appendChild(ulSub);
+				}
+				this.processSection(main, subs[i], ulSub, false, subGroup);
+			}
+		}
+    },
+	
+	titleElement(text, type, setId, upper, navSection) {
+		const el = document.createElement(type);
+
+		if (setId) {
+			el.id = `section${this.index}`;
+			this.index++;
+		}
+
+		const classes = [];
+		if (upper) classes.push("upper");
+		if (navSection) classes.push("navSection");
+		if (classes.length) el.className = classes.join(" ");
+
+		el.innerHTML = text ?? "";
+		
+		return el;
 	},
-	answerElement: function(label, ariaLabel, text, question) {
-		var elem = document.createElement('a');	
-		elem.setAttribute('class', 'answer-row');
-		if (!('alwaysShow' in question) || !question.alwaysShow) {
-			elem.addEventListener('click', this.toggle);
+	
+	answerElement(label, ariaLabel, text, question) {
+		const row = document.createElement("div");
+		row.className = "answer-row";
+		
+		const alwaysShow = !!question?.alwaysShow;
+		if (!alwaysShow) row.addEventListener("click", this.toggle);
+	
+
+		if (label) {
+			const lbl = document.createElement("div");
+			lbl.className = "answer-label";
+			lbl.innerHTML = label;
+			row.appendChild(lbl);
 		}
-		var answerLabel = document.createElement('div');
-		answerLabel.setAttribute('class', 'answer-label');
-		answerLabel.innerHTML = label;
-		elem.appendChild(answerLabel);
-		var answerCell = document.createElement('div');
-		answerCell.setAttribute('class', 'answer-cell');
-		answerCell.setAttribute('aria-label', ariaLabel);
-		answerCell.setAttribute('role', 'alert');
-		var answer = document.createElement('span');
-		answer.setAttribute('class', 'answer');
-		if (!('alwaysShow' in question) || !question.alwaysShow) {
-			answer.setAttribute('style', 'visibility:hidden');		
-		}
-		if ('columns' in question && Array.isArray(text)) {
-			for (var i = 0; i < question.columns.length; i++) {
-				var subAnswer = document.createElement('span');
-				subAnswer.setAttribute('class', 'answer-col');
-				var attributes = ['width: ' + question.columns[i].width];
-				if ('align' in question.columns[i]) {
-					attributes.push('text-align: ' + question.columns[i].align);
-				}
-				subAnswer.setAttribute('style', attributes.join('; '));
-				if (text.length > i) {
-					subAnswer.innerHTML = text[i];
-				}
-				answer.appendChild(subAnswer);
+		
+		const cell = document.createElement("div");
+		cell.className = "answer-cell";
+		cell.setAttribute("aria-label", ariaLabel ?? "");
+		cell.setAttribute("role", "alert");
+		
+		const ans = document.createElement("span");
+		ans.className = "answer";
+		if (!alwaysShow) ans.style.visibility = "hidden";
+		
+		if (Array.isArray(text) && Array.isArray(question?.columns)) {
+			for (let i = 0; i < question.columns.length; i++) {
+				const col = question.columns[i];
+				const sub = document.createElement("span");
+				sub.className = "answer-col";
+				
+				const styles = [`width: ${col.width}`];
+				if (col.align) styles.push(`text-align: ${col.align}`);
+				sub.setAttribute("style", styles.join("; "));
+				
+				sub.innerHTML = text[i] ?? "";
+				ans.appendChild(sub);
 			}
 		} else {
-			answer.innerHTML = text;
+			ans.innerHTML = text ?? "";
 		}
-		answerCell.appendChild(answer);
-		elem.appendChild(answerCell);
 		
-		return elem;
-	},
-	answerGap: function() {
-		var gap = document.createElement('div');
-		gap.setAttribute('class', 'gap');
-		gap.appendChild(document.createTextNode('\u2009'));
+		cell.appendChild(ans);
+		row.appendChild(cell);
 		
-		return gap;
+		return row;
 	},
-	columnHeaders: function(columns) {
-		var header = document.createElement('div'); 
-		header.setAttribute("class","answer-header");
-		var answerLabel = document.createElement('div');
-		answerLabel.setAttribute('class', 'answer-label');
-		header.appendChild(answerLabel);
-		var answerCell = document.createElement('div');
-		answerCell.setAttribute('class', 'answer-cell');
-		for (var i = 0; i < columns.length; i++) {
-			var subAnswer = document.createElement('span');
-			subAnswer.setAttribute('class', 'answer-col');
-			var attributes = ['width: ' + columns[i].width];
-			if ('align' in columns[i]) {
-				attributes.push('text-align: ' + columns[i].align);
-			}
-			subAnswer.setAttribute('style', attributes.join('; '));
-			subAnswer.appendChild(document.createTextNode(columns[i].header));
-			answerCell.appendChild(subAnswer);
+		
+	columnHeaders(hasLabel, columns) {
+		const header = document.createElement("div");
+		header.className = "answer-header";
+	
+		if (hasLabel) {
+			const lbl = document.createElement("div");
+			lbl.className = "answer-label";
+			header.appendChild(lbl);
 		}
-		header.appendChild(answerCell);			
+		
+		const cell = document.createElement("div");
+		cell.className = "answer-cell";
+		
+		for (let i = 0; i < columns.length; i++) {
+			const col = columns[i];
+			const span = document.createElement("span");
+			span.className = "answer-col";
+			
+			const styles = [`width: ${col.width}`];
+			if (col.align) styles.push(`text-align: ${col.align}`);
+			span.setAttribute("style", styles.join("; "));
+			
+			span.appendChild(document.createTextNode(col.header ?? ""));
+			cell.appendChild(span);
+		}
+		
+		header.appendChild(cell);		
 		return header;
 	},
-	answersElement: function(question) {
-		var elem = document.createElement('div');
-		var classes = ['answers'];
-		if ('anyAnswer' in question && question.anyAnswer) {
-			classes.push('anyAnswer');
-		}
-		elem.setAttribute('class',classes.join(' '));
-		if ('columns' in question) {
-			if (!('columnHeaders' in question) || question.columnHeaders) {
-				elem.appendChild(this.columnHeaders(question.columns));
-			}
-		}
-		var ariaLabel = '';
-		var label = '';
-		var numberedList = this.numberedList;
-		if ('numberedList' in question) {
-			numberedList = question.numberedList;
+	
+	indexToLetters(i) {
+		return String.fromCharCode(65 + (i % 26)).repeat(Math.floor(i / 26) + 1)
+	},
+	
+	answersElement(question) {
+		const q = question ?? {};
+		const answers = q.answers ?? [];
+		
+		const hasLabel = !!q.customLabels || !!q.orderedList;
+		
+		const wrapper = document.createElement("div");
+		const classes = ["answers"];
+		if (q.anyAnswer) classes.push("anyAnswer");
+		if (q.noPadding) classes.push("no-padding");
+		if (hasLabel && this.offsetAnswers) classes.push("offset");
+		wrapper.className = classes.join(" ");
+
+		if (q.columns && (q.columnHeaders ?? true)) {
+			wrapper.appendChild(this.columnHeaders(hasLabel, q.columns));
 		}
 		
-		for (var i = 0; i < question.answers.length; i++) {
-			var answer = question.answers[i];
-			if ('customLabels' in question && question.customLabels && Array.isArray(answer)) {
-				ariaLabel = answer.shift();
+		const numberedList = q.numberedList ?? this.numberedList;
+		const answerCount = answers.length;
+		
+		for (let i = 0; i < answerCount; i++) {
+			let answer = answers[i];
+
+			let ariaLabel = "";
+			let label = "";
+			
+			const singleBulletPoints = typeof q.singleBulletPoints === "boolean" ? q.singleBulletPoints : this.singleBulletPoints;
+			
+			if (q.customLabels && Array.isArray(answer)) {
+				ariaLabel = answer.shift() ?? "";
 				label = ariaLabel;
-			} else if (question.orderedList) {
-				if (numberedList) {
-					ariaLabel = (i + 1).toString();
+			} else if (q.orderedList) {
+				if (answerCount === 1 && !singleBulletPoints) {
+					ariaLabel = "";
+					label = " ";
 				} else {
-					ariaLabel = String.fromCharCode(65 + i % 26).repeat(Math.floor(i / 26) + 1);
-				}			
-				if ('listPrefix' in question) {
-					ariaLabel = question.listPrefix + ariaLabel;
+					ariaLabel = numberedList ? String(i + 1) : this.indexToLetters(i);
+					
+					if (q.listPrefix) ariaLabel = q.listPrefix + ariaLabel;
+					label = ariaLabel + (q.listSuffix ?? ".");
 				}
-				label = ariaLabel + ('listSuffix' in question ? question.listSuffix : '.');
+			}
+			
+			wrapper.appendChild(this.answerElement(label, ariaLabel, answer, q));
+		}
+		
+		return wrapper;
+	},
+	
+	questionElement(question, index, hiddenTitles) {
+		const q = question ?? {};
+		
+		const el = document.createElement("div");
+		const classes = ["question"];
+		if (q.class) classes.push(q.class);
+		el.className = classes.join(" ");
+		
+		if (q.title) {
+			let titleEl;
+						
+			if (hiddenTitles) {
+				titleEl = document.createElement("div");
+				titleEl.className = "answers title";
+				
+				const aria = String(index + 1);
+				const label = `${aria}.`;
+				titleEl.appendChild(this.answerElement(label, aria, q.title, { alwaysShow: false }));
 			} else {
-				label = '\u2022';
-				ariaLabel = '';
-			};
-			elem.appendChild(this.answerElement(label, ariaLabel, answer, question));
-			elem.appendChild(this.answerGap());						
-		}
-		return elem;
-	},
-	questionElement: function(question) {
-		var elem = document.createElement('div');	
-		var classes = ['question','indented'];
-		if ('class' in question) {
-			classes.push(question.class);
-		}
-		elem.setAttribute('class',classes.join(' '));
-		if ('title' in question && question.title != '') {
-			var titleElem = this.titleElement(question.title, 'h3', false, false);
-			var span = titleElem.querySelector('span');
-			if (span != null && span.classList.contains('hidden-title')) {
-				span.removeAttribute("class");
-				span.setAttribute("style", "visibility: hidden;");
-				var h3Elem = span.closest('h3');
-				h3Elem.setAttribute("class", "hidden-title");
-				h3Elem.addEventListener("click", this.toggleTitle);
+				titleEl = this.titleElement(q.title, "h3", false, false, false);
 			}
-			elem.appendChild(titleElem);
+			
+			el.appendChild(titleEl);
 		}
-		if ('subTitle' in question && question.subTitle != '') {
-			elem.appendChild(this.titleElement(question.subTitle, 'h4', false, false));
+		
+		if (q.subTitle) {
+			 el.appendChild(this.titleElement(q.subTitle, "h4", false, false, false));
 		}
-		if (!('orderedList' in question)) {
-			question.orderedList = (question.answers.length > 1);
+		
+		if (!Object.prototype.hasOwnProperty.call(q, "orderedList")) {
+			q.orderedList = this.orderedList;
 		}
-		elem.appendChild(this.answersElement(question));
-		return elem;
+		
+		if (!Object.prototype.hasOwnProperty.call(q, "noPadding")) {
+			q.noPadding = this.noPadding;
+		}
+
+		el.appendChild(this.answersElement(q));
+		return el;
 	},
-	imageElement: function(image) {
-		var elem = document.createElement('img');
-		elem.setAttribute('class', 'indented');
-		elem.setAttribute('src', image);
-		return elem;
+	
+	imageElement(src) {
+		const img = document.createElement("img");
+		img.className = "sectionImg";
+		img.src = src;
+		return img;
 	},
-	toggle: function() {
-		var span = this.querySelector('.answer');
-		var visible = (span.style.visibility !== "hidden");
-		var parent = span.closest('.answers');
-		var anyAnswer = parent.classList.contains('anyAnswer');
-		if (anyAnswer) {
-			span.setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
-		} else {
-			var answers = parent.querySelectorAll('.answer-row .answer-cell .answer');
-			if (visible) {
-				answers = [...answers];
-				answers.reverse();
-			}
-			for (var i = 0; i < answers.length; i++) {
-				answers[i].setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
-				if (span === answers[i]) {
-					break;
-				}
-			}
+	
+	toggle() {
+		const span = this.querySelector(".answer");
+		if (!span) return;
+		
+		const visible = span.style.visibility !== "hidden";
+		const parent = span.closest(".answers");
+		if (!parent) return;
+		
+		if (parent.classList.contains("anyAnswer")) {
+			span.style.visibility = visible ? "hidden" : "visible";
+			return;
+		}
+		
+		let answers = parent.querySelectorAll(".answer-row .answer-cell .answer");
+		answers = Array.from(answers);
+		
+		if (visible) answers.reverse();
+		
+		for (let i = 0; i < answers.length; i++) {
+			answers[i].style.visibility = visible ? "hidden" : "visible";
+			if (span === answers[i]) break;
 		}
 	},
-	toggleTitle: function() {
-		var span = this.querySelector('span');
-		var visible = (span.style.visibility !== "hidden");
-		span.setAttribute("style", visible ? "visibility: hidden;" : "visibility: visible;");
+	
+	toggleTitle() {
+		const span = this.querySelector("span");
+		if (!span) return;
+		
+		const visible = span.style.visibility !== "hidden";
+		span.style.visibility = visible ? "hidden" : "visible";
 	},
-	navSection: function () {
+	
+	navSection() {
 		location.href = this.value;
-		document.querySelector(".topNav select").focus();
+		document.querySelector(".topNav select")?.focus();
 	}
 }
 document.addEventListener("DOMContentLoaded", function(event) { 

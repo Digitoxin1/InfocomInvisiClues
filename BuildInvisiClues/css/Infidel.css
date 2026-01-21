@@ -2,6 +2,7 @@
 	vertical-align: middle;
 }
 .question.hieroglyphs .answer-label {
+	flex: 0 0 5em;
 	text-align: left;
 	line-height: 0.9em;
 }

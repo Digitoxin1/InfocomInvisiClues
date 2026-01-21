@@ -1,3 +1,9 @@
 .answer-padding {
 	padding-left: 7.5em;
 }
+.compassRose {
+	text-align: center;
+}
+.compassRose img {
+	height: 200px;
+}
